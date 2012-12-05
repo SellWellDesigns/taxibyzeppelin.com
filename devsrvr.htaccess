@@ -1,4 +1,16 @@
 #
+# Password Protect Site
+#
+AuthUserFile /sites/site_name/.htpasswds/.htxuympwp
+AuthType Basic
+AuthName "Cirro Development Site"
+Require valid-user
+#
+# End Password Protect
+#
+
+
+#
 # Apache/PHP/Drupal settings:
 #
 
