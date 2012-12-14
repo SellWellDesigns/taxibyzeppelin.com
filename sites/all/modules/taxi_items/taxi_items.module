@@ -30,86 +30,11 @@ function taxi_items_entity_info() {
 		),
 	);
 
-
-
-
-
-
-
-	// About Page
-	$entities['about_page'] = array(
-		'label' => t('About Page'),
+	// Company Item
+	$entities['company_item'] = array(
+		'label' => t('Company Item'),
 		'controller class' => 'cirroCoreController',
-		'base table' => 'taxi_about_page',
-		'dashboard' => array('primary'),
-	);
-
-	// Press Page
-	$entities['press_page'] = array(
-		'label' => t('Press Page'),
-		'controller class' => 'cirroCoreController',
-		'base table' => 'taxi_press_page',
-		'dashboard' => array('primary'),
-		'multi_img' => array(
-			'press_imgs' => array(
-				'label' => 'Press Images',
-			),
-		),
-	);
-
-	// Contact Page
-	$entities['contact_page'] = array(
-		'label' => t('Contact Page'),
-		'controller class' => 'cirroCoreController',
-		'base table' => 'taxi_contact_page',
-		'dashboard' => array('primary'),
-	);
-
-	// Store Item
-	$entities['store_item'] = array(
-		'label' => t('Store Item'),
-		'controller class' => 'cirroCoreController',
-		'base table' => 'taxi_store_item',
-		'dashboard' => array('add', 'table', 'weight'),
-		'multi_img' => array(
-			'additional_imgs' => array(
-				'label' => 'Additional Images',
-				'limit' => 6,
-			),
-			'celeb_imgs' => array(
-				'label' => 'Celebrity Images',
-			),
-		),
-	);
-	
-	$entities['collection'] = array(
-		'label' => t('Collection'),
-		'controller class' => 'cirroCoreController',
-		'base table' => 'taxi_collection',
-		'dashboard' => array('add', 'table', 'weight'),
-		'multi_img' => array(
-			'collection_imgs' => array(
-				'label' => 'Collection Images',
-			),
-		),
-	);
-	
-	$entities['blog'] = array(
-		'label' => t('Blog'),
-		'controller class' => 'cirroCoreController',
-		'base table' => 'taxi_blog',
-		'dashboard' => array('add', 'table', 'weight'),
-		'multi_img' => array(
-			'blog_imgs' => array(
-				'label' => 'Blog Images',
-			),
-		),
-	);
-		
-	$entities['location'] = array(
-		'label' => t('Location'),
-		'controller class' => 'cirroCoreController',
-		'base table' => 'taxi_location',
+		'base table' => 'taxi_company_item',
 		'dashboard' => array('add', 'table'),
 	);
 
@@ -137,6 +62,3 @@ function taxi_items_entity_info() {
 	return $entities;
 
 }
-
-
-

@@ -16,293 +16,27 @@ function taxi_items_schema() {
 	// HOME PAGE
 	$schema['taxi_home_page'] = array(
 
-		'description' => 'Base table for home_page',
+		'description' => 'Base table for taxi_home_page',
 
 		'fields' => array(
 
-			'primary_img' => array(
+			'intro_body' => array(
+				'type' => 'text',
+				'size' => 'medium',
+				'form' => array(
+					'#type' => 'textarea',
+					'#title' => 'Intro Body',
+					'#rows' => 5,
+				),
+			),
+
+			'map_img' => array(
 				'type' => 'int',
 				'unsigned' => TRUE,
 				'form' => array(
 					'#type' => 'managed_file',
-					'#title' => 'Home Page Image',
-					'#upload_location' => 'public://home_page_img',		
-				),
-			),
-
-		),
-
-		'primary key' => array('id'),
-
-	);
-
-	// ABOUT PAGE
-	$schema['taxi_about_page'] = array(
-
-		'description' => 'Base table for about_page',
-
-		'fields' => array(
-
-			'about_page_vimeo_id' => array(
-				'type' => 'varchar',
-				'length' => 255,
-				'not null' => TRUE,
-				'form' => array(
-					'#type' => 'textfield',
-					'#title' => 'About Page Vimeo Id',
-				),
-			),
-
-			'about_page_text' => array(
-				'type' => 'text',
-				'size' => 'medium',
-				'form' => array(
-					'#type' => 'textarea',
-					'#title' => 'About Page Text',
-				),
-			),
-
-			'about_bio_img_1' => array(
-				'type' => 'int',
-				'unsigned' => TRUE,
-				'form' => array(
-					'#type' => 'managed_file',
-					'#title' => 'About Page Bio Image 1',
-					'#upload_location' => 'public://about_imgs',		
-				),
-			),
-
-			'about_bio_1' => array(
-				'type' => 'text',
-				'size' => 'medium',
-				'form' => array(
-					'#type' => 'textarea',
-					'#title' => 'About Bio 1',
-				),
-			),
-
-			'about_bio_img_2' => array(
-				'type' => 'int',
-				'unsigned' => TRUE,
-				'form' => array(
-					'#type' => 'managed_file',
-					'#title' => 'About Page Bio Image 2',
-					'#upload_location' => 'public://about_imgs',		
-				),
-			),
-
-			'about_bio_2' => array(
-				'type' => 'text',
-				'size' => 'medium',
-				'form' => array(
-					'#type' => 'textarea',
-					'#title' => 'About Bio 2',
-				),
-			),
-
-		),
-
-		'primary key' => array('id'),
-
-	);
-
-	// PRESS PAGE
-	$schema['taxi_press_page'] = array(
-
-		'description' => 'Base table for press_page',
-
-		'fields' => array(),
-
-		'primary key' => array('id'),
-
-	);
-
-	// CONTACT PAGE
-	$schema['taxi_contact_page'] = array(
-
-		'description' => 'Base table for contact_page',
-
-		'fields' => array(
-
-			'contact_page_text' => array(
-				'type' => 'text',
-				'size' => 'medium',
-				'form' => array(
-					'#type' => 'textarea',
-					'#title' => 'Contact Page Text',
-					'#rows' => 20,
-				),
-			),
-
-		),
-
-		'primary key' => array('id'),
-
-	);
-
-	// STORE ITEM
-	$schema['taxi_store_item'] = array(
-
-		'description' => 'Base table for store_item',
-
-		'fields' => array(
-			
-			'name' => array(
-				'type' => 'varchar',
-				'length' => 255,
-				'not null' => TRUE,
-				'form' => array(
-					'#type' => 'textfield',
-					'#title' => 'Store Item Name',
-				),
-			),
-
-			'weight' => array(
-				'type' => 'int',
-				'not null' => TRUE,
-				'default' => 0,
-			),
-
-			'primary_img' => array(
-				'type' => 'int',
-				'unsigned' => TRUE,
-				'form' => array(
-					'#type' => 'managed_file',
-					'#title' => 'Primary Image',
-					'#upload_location' => 'public://store_items/primary_img',		
-				),
-			),
-			
-			'buy_link' => array(
-				'type' => 'varchar',
-				'length' => 255,
-				'not null' => TRUE,
-				'default' => '',
-				'form' => array(
-					'#type' => 'textfield',
-					'#title' => 'Buy Link' 
-				 ),	 
-			),
-			
-			'details' => array(
-				'type' => 'text',
-				'size' => 'medium',
-				'form' => array(
-					'#type' => 'textarea',
-					'#title' => 'Details',
-				),
-			),
-
-			'model_stats' => array(
-				'type' => 'text',
-				'size' => 'medium',
-				'form' => array(
-					'#type' => 'textarea',
-					'#title' => 'Model Stats',
-				),
-			),						
-
-		),
-		
-		'primary key' => array('id'),
-
-	);
-
-	$schema['taxi_collection'] = array(
-
-		'description' => 'Base table for collection',
-		'fields' => array(
-			
-			'name' => array(
-				'type' => 'varchar',
-				'length' => 255,
-				'not null' => TRUE,
-				'form' => array(
-					'#type' => 'textfield',
-					'#title' => 'Collection Name',
-				),
-			),
-
-			'weight' => array(
-				'type' => 'int',
-				'not null' => TRUE,
-				'default' => 0,
-			),
-		
-		),
-		
-		'primary key' => array('id'),
-
-	);
-	
-	$schema['taxi_blog'] = array(
-
-		'description' => 'Base table for blog',
-
-		'fields' => array(
-			
-			'name' => array(
-				'type' => 'varchar',
-				'length' => 255,
-				'not null' => TRUE,
-				'form' => array(
-					'#type' => 'textfield',
-					'#title' => 'Blog Title',
-				),
-			),
-			
-			'weight' => array(
-				'type' => 'int',
-				'not null' => TRUE,
-				'default' => 0,
-			),
-
-			'body' => array(
-				'type' => 'text',
-				'size' => 'medium',
-				'form' => array(
-					'#type' => 'textarea',
-					'#title' => 'Body',
-				),
-			),
-
-			'blog_type' => array(
-				'type' => 'varchar',
-				'length' => 255,
-				'not null' => TRUE,
-				'default' => '',
-				'form' => array(
-					'#type' => 'select',
-					'#options' => array(
-						'laura' => 'Laura\'s Spot',
-						'gillian' => 'Gillian\'s Spot',
-						'lookbooks' => 'FL&L Lookbooks',
-						'babes' => 'FL&L Babes',
-						'models' => 'FL&L Model Muses',
-					),
-				),
-			),
-
-		),
-		
-		'primary key' => array('id'),
-
-	);
-
-	$schema['taxi_location'] = array(
-
-		'description' => 'Base table for location',
-
-		'fields' => array(
-
-			'name' => array(
-				'type' => 'varchar',
-				'length' => 255,
-				'not null' => TRUE,
-				'form' => array(
-					'#type' => 'textfield',
-					'#title' => 'Store Name',
-					'#required' => TRUE,
+					'#title' => 'Map Image',
+					'#upload_location' => 'public://map_img',		
 				),
 			),
 
@@ -312,44 +46,77 @@ function taxi_items_schema() {
 				'form' => array(
 					'#type' => 'textarea',
 					'#title' => 'Address',
-					'#required' => TRUE,
+					'#rows' => 5,
 				),
 			),
 
-			'formatted_address' => array(
+			'leasing_info' => array(
 				'type' => 'text',
 				'size' => 'medium',
+				'form' => array(
+					'#type' => 'textarea',
+					'#title' => 'Leasing Info',
+					'#rows' => 5,
+				),
 			),
 
-			'store_link' => array(
+		),
+
+		'primary key' => array('id'),
+
+	);
+
+	// COMPANY ITEM
+	$schema['taxi_company_item'] = array(
+
+		'description' => 'Base table for taxi_company_item',
+
+		'fields' => array(
+
+			'name' => array(
+				'type' => 'varchar',
+				'length' => 255,
+				'not null' => TRUE,
+				'form' => array(
+					'#type' => 'textfield',
+					'#title' => 'Company Name',
+				),
+			),
+
+			'link' => array(
 				'type' => 'varchar',
 				'length' => 255,
 				'not null' => TRUE,
 				'default' => '',
 				'form' => array(
 					'#type' => 'textfield',
-					'#title' => 'Store Link' 
-				 ),	 
+					'#title' => 'Company Website',
+					'#description' => 'http://www.example.com', 
+				),	 
 			),
 
-			'latitude' => array(
+			'building' => array(
 				'type' => 'varchar',
 				'length' => 255,
 				'not null' => TRUE,
 				'default' => '',
-			),
-
-			'longitude' => array(
-				'type' => 'varchar',
-				'length' => 255,
-				'not null' => TRUE,
-				'default' => '',
+				'form' => array(
+					'#type' => 'select',
+					'#title' => 'Building'
+					'#options' => array(
+						'taxi' => 'Taxi',
+						'taxi_2' => 'Taxi 2',
+						'freight' => 'Freight',
+						'diesel' => 'Diesel',
+						'drive' => 'Drive',
+					),
+				),
 			),
 
 		),
-		
+
 		'primary key' => array('id'),
-		
+
 	);
 
 	/*
