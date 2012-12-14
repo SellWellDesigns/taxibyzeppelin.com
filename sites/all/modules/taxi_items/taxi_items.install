@@ -73,7 +73,7 @@ function taxi_items_schema() {
 
 		'fields' => array(
 
-			'name' => array(
+			'title' => array(
 				'type' => 'varchar',
 				'length' => 255,
 				'not null' => TRUE,
@@ -102,7 +102,7 @@ function taxi_items_schema() {
 				'default' => '',
 				'form' => array(
 					'#type' => 'select',
-					'#title' => 'Building'
+					'#title' => 'Building',
 					'#options' => array(
 						'taxi' => 'Taxi',
 						'taxi_2' => 'Taxi 2',
