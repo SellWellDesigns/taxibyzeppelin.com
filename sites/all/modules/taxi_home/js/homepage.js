@@ -8,23 +8,6 @@
 				$nav        = $("#nav a"),
 				$flexslider = $(".flexslider");
 
-
-		// ----------------------------------------------------------
-		// "Hey window...how big are you?"
-		// ----------------------------------------------------------
-		// $(window).resize(function() {
-		  
-		//   // Height and Width vars	
-		// 	var winHeight = $window.height();
-		// 	var $bgSlider = $("#bg-slider");
-
-		// 	$bgSlider.css("height", winHeight);
-
-		// 	console.log(winHeight);
-
-		// });
-
-
 		// ----------------------------------------------------------
 		// This scrolling is so damn smooth...mmmmmmm
 		// ----------------------------------------------------------
@@ -48,6 +31,49 @@
 
 		});
 
+
+		// ----------------------------------------------------------
+		// Where am i? 
+		// ----------------------------------------------------------
+		$(function(){
+
+			var sections  = {},
+					$this     = $(this);
+					winHeight = $window.height(),
+					$nav      = $("#nav"),
+					$navItem  = $("#nav li a"),
+					i 				= 0;
+
+			// Grab the position of all our sections
+			$(".section").each(function(){
+
+				sections[this.id] = $(this).offset().top;
+
+				console.log(sections[this.id]);
+
+			})
+
+			$(document).scroll(function(){
+
+				var pos = $this.scrollTop();
+
+				//console.log(pos);
+
+				for ( i in sections ) {
+
+					if ( sections[i] > pos && sections[i] < pos + winHeight ) {
+
+						//$navItem
+
+					} 
+				
+				} 
+
+
+			})
+
+
+		});
 
 
 		// ----------------------------------------------------------

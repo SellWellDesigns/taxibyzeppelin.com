@@ -42,15 +42,20 @@ function taxi_home_page_build(){
   // $brand_items = $brands_query->fetchAll();
 
   $bg_slider = "
-  	<section id=\"bg-slider\">
-  		<img src=\"//taxibyzeppelin.com/TAXI_homepage_backgroundimage.gif\" />
+  	<section id=\"bg-slider\" class=\"section\">
+  		<div class=\"slice-wrap\">
+  			<img src=\"//taxibyzeppelin.com/TAXI_homepage_backgroundimage.gif\" />
+  		</div>
   	</section>
   ";
 
 
   $about = "
-  	<section id=\"about\" class=\"content-section text-center\">
-  		<article>
+  	<section id=\"about\" class=\"section text-center\">
+  		<div class=\"slice-wrap\">
+  			<img src=\"/sites/all/themes/clim/images/slices.png\" class=\"slice\"/>
+  		</div>
+  		<article class=\"content-section\">
   			<h1>About</h1>
   
   		</article>
@@ -58,8 +63,9 @@ function taxi_home_page_build(){
   ";
 
   $companies = "
-  	<section id=\"companies\" class=\"content-section text-center\">
-  		<article>
+  	<section id=\"companies\" class=\"section text-center\">
+  		<img src=\"/sites/all/themes/clim/images/slices.png\" class=\"slice\"/>
+  		<article class=\"content-section\">
   			<h1>Companies</h1>
 
   		</article>
@@ -67,7 +73,7 @@ function taxi_home_page_build(){
   ";
 
   $footer = "
-  	<footer id=\"footer\" class=\"text-center\">
+  	<footer id=\"footer\" class=\"section text-center\">
 		  	
 		</footer> 
   ";
