@@ -1,0 +1,142 @@
+<?php
+
+/**
+ * @file
+ * The define project entities.
+ */
+
+/**
+ * Implements hook_entity_info().
+ *
+ * @return
+ *   Array of entity info arrays.
+ */
+function taxi_items_entity_info() {
+	
+	// Init
+	$entities = array();
+
+	// Home Page
+	$entities['home_page'] = array(
+		'label' => t('Home Page'),
+		'controller class' => 'cirroCoreController',
+		'base table' => 'taxi_home_page',
+		'dashboard' => array('primary'),
+		'multi_img' => array(
+			'slider' => array(
+				'label' => 'Slider Images',
+				'limit' => 5,
+			),
+		),
+	);
+
+
+
+
+
+
+
+	// About Page
+	$entities['about_page'] = array(
+		'label' => t('About Page'),
+		'controller class' => 'cirroCoreController',
+		'base table' => 'taxi_about_page',
+		'dashboard' => array('primary'),
+	);
+
+	// Press Page
+	$entities['press_page'] = array(
+		'label' => t('Press Page'),
+		'controller class' => 'cirroCoreController',
+		'base table' => 'taxi_press_page',
+		'dashboard' => array('primary'),
+		'multi_img' => array(
+			'press_imgs' => array(
+				'label' => 'Press Images',
+			),
+		),
+	);
+
+	// Contact Page
+	$entities['contact_page'] = array(
+		'label' => t('Contact Page'),
+		'controller class' => 'cirroCoreController',
+		'base table' => 'taxi_contact_page',
+		'dashboard' => array('primary'),
+	);
+
+	// Store Item
+	$entities['store_item'] = array(
+		'label' => t('Store Item'),
+		'controller class' => 'cirroCoreController',
+		'base table' => 'taxi_store_item',
+		'dashboard' => array('add', 'table', 'weight'),
+		'multi_img' => array(
+			'additional_imgs' => array(
+				'label' => 'Additional Images',
+				'limit' => 6,
+			),
+			'celeb_imgs' => array(
+				'label' => 'Celebrity Images',
+			),
+		),
+	);
+	
+	$entities['collection'] = array(
+		'label' => t('Collection'),
+		'controller class' => 'cirroCoreController',
+		'base table' => 'taxi_collection',
+		'dashboard' => array('add', 'table', 'weight'),
+		'multi_img' => array(
+			'collection_imgs' => array(
+				'label' => 'Collection Images',
+			),
+		),
+	);
+	
+	$entities['blog'] = array(
+		'label' => t('Blog'),
+		'controller class' => 'cirroCoreController',
+		'base table' => 'taxi_blog',
+		'dashboard' => array('add', 'table', 'weight'),
+		'multi_img' => array(
+			'blog_imgs' => array(
+				'label' => 'Blog Images',
+			),
+		),
+	);
+		
+	$entities['location'] = array(
+		'label' => t('Location'),
+		'controller class' => 'cirroCoreController',
+		'base table' => 'taxi_location',
+		'dashboard' => array('add', 'table'),
+	);
+
+	/**
+	 * Default entity options.
+	 *
+	 * This array will be added to each entity array.
+	 */
+	$defaults = array(
+		'fieldable' => FALSE,
+		'entity keys' => array(
+			'id' => 'id',
+		),
+		'static cache' => TRUE,
+	);
+	
+	// Loop through entities
+	foreach ( $entities as $index => $entity ) {
+		
+		// Merge defaults array
+		$entities[$index] = array_merge($defaults, $entity);
+		
+	}
+	
+	return $entities;
+
+}
+
+
+

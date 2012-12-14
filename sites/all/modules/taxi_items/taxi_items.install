@@ -1,0 +1,419 @@
+<?php
+
+/**
+ * @file
+ * Schema info, updates and any other install/uninstall tasks.
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function taxi_items_schema() {
+	
+	// Init
+	$schema = array();
+
+	// HOME PAGE
+	$schema['taxi_home_page'] = array(
+
+		'description' => 'Base table for home_page',
+
+		'fields' => array(
+
+			'primary_img' => array(
+				'type' => 'int',
+				'unsigned' => TRUE,
+				'form' => array(
+					'#type' => 'managed_file',
+					'#title' => 'Home Page Image',
+					'#upload_location' => 'public://home_page_img',		
+				),
+			),
+
+		),
+
+		'primary key' => array('id'),
+
+	);
+
+	// ABOUT PAGE
+	$schema['taxi_about_page'] = array(
+
+		'description' => 'Base table for about_page',
+
+		'fields' => array(
+
+			'about_page_vimeo_id' => array(
+				'type' => 'varchar',
+				'length' => 255,
+				'not null' => TRUE,
+				'form' => array(
+					'#type' => 'textfield',
+					'#title' => 'About Page Vimeo Id',
+				),
+			),
+
+			'about_page_text' => array(
+				'type' => 'text',
+				'size' => 'medium',
+				'form' => array(
+					'#type' => 'textarea',
+					'#title' => 'About Page Text',
+				),
+			),
+
+			'about_bio_img_1' => array(
+				'type' => 'int',
+				'unsigned' => TRUE,
+				'form' => array(
+					'#type' => 'managed_file',
+					'#title' => 'About Page Bio Image 1',
+					'#upload_location' => 'public://about_imgs',		
+				),
+			),
+
+			'about_bio_1' => array(
+				'type' => 'text',
+				'size' => 'medium',
+				'form' => array(
+					'#type' => 'textarea',
+					'#title' => 'About Bio 1',
+				),
+			),
+
+			'about_bio_img_2' => array(
+				'type' => 'int',
+				'unsigned' => TRUE,
+				'form' => array(
+					'#type' => 'managed_file',
+					'#title' => 'About Page Bio Image 2',
+					'#upload_location' => 'public://about_imgs',		
+				),
+			),
+
+			'about_bio_2' => array(
+				'type' => 'text',
+				'size' => 'medium',
+				'form' => array(
+					'#type' => 'textarea',
+					'#title' => 'About Bio 2',
+				),
+			),
+
+		),
+
+		'primary key' => array('id'),
+
+	);
+
+	// PRESS PAGE
+	$schema['taxi_press_page'] = array(
+
+		'description' => 'Base table for press_page',
+
+		'fields' => array(),
+
+		'primary key' => array('id'),
+
+	);
+
+	// CONTACT PAGE
+	$schema['taxi_contact_page'] = array(
+
+		'description' => 'Base table for contact_page',
+
+		'fields' => array(
+
+			'contact_page_text' => array(
+				'type' => 'text',
+				'size' => 'medium',
+				'form' => array(
+					'#type' => 'textarea',
+					'#title' => 'Contact Page Text',
+					'#rows' => 20,
+				),
+			),
+
+		),
+
+		'primary key' => array('id'),
+
+	);
+
+	// STORE ITEM
+	$schema['taxi_store_item'] = array(
+
+		'description' => 'Base table for store_item',
+
+		'fields' => array(
+			
+			'name' => array(
+				'type' => 'varchar',
+				'length' => 255,
+				'not null' => TRUE,
+				'form' => array(
+					'#type' => 'textfield',
+					'#title' => 'Store Item Name',
+				),
+			),
+
+			'weight' => array(
+				'type' => 'int',
+				'not null' => TRUE,
+				'default' => 0,
+			),
+
+			'primary_img' => array(
+				'type' => 'int',
+				'unsigned' => TRUE,
+				'form' => array(
+					'#type' => 'managed_file',
+					'#title' => 'Primary Image',
+					'#upload_location' => 'public://store_items/primary_img',		
+				),
+			),
+			
+			'buy_link' => array(
+				'type' => 'varchar',
+				'length' => 255,
+				'not null' => TRUE,
+				'default' => '',
+				'form' => array(
+					'#type' => 'textfield',
+					'#title' => 'Buy Link' 
+				 ),	 
+			),
+			
+			'details' => array(
+				'type' => 'text',
+				'size' => 'medium',
+				'form' => array(
+					'#type' => 'textarea',
+					'#title' => 'Details',
+				),
+			),
+
+			'model_stats' => array(
+				'type' => 'text',
+				'size' => 'medium',
+				'form' => array(
+					'#type' => 'textarea',
+					'#title' => 'Model Stats',
+				),
+			),						
+
+		),
+		
+		'primary key' => array('id'),
+
+	);
+
+	$schema['taxi_collection'] = array(
+
+		'description' => 'Base table for collection',
+		'fields' => array(
+			
+			'name' => array(
+				'type' => 'varchar',
+				'length' => 255,
+				'not null' => TRUE,
+				'form' => array(
+					'#type' => 'textfield',
+					'#title' => 'Collection Name',
+				),
+			),
+
+			'weight' => array(
+				'type' => 'int',
+				'not null' => TRUE,
+				'default' => 0,
+			),
+		
+		),
+		
+		'primary key' => array('id'),
+
+	);
+	
+	$schema['taxi_blog'] = array(
+
+		'description' => 'Base table for blog',
+
+		'fields' => array(
+			
+			'name' => array(
+				'type' => 'varchar',
+				'length' => 255,
+				'not null' => TRUE,
+				'form' => array(
+					'#type' => 'textfield',
+					'#title' => 'Blog Title',
+				),
+			),
+			
+			'weight' => array(
+				'type' => 'int',
+				'not null' => TRUE,
+				'default' => 0,
+			),
+
+			'body' => array(
+				'type' => 'text',
+				'size' => 'medium',
+				'form' => array(
+					'#type' => 'textarea',
+					'#title' => 'Body',
+				),
+			),
+
+			'blog_type' => array(
+				'type' => 'varchar',
+				'length' => 255,
+				'not null' => TRUE,
+				'default' => '',
+				'form' => array(
+					'#type' => 'select',
+					'#options' => array(
+						'laura' => 'Laura\'s Spot',
+						'gillian' => 'Gillian\'s Spot',
+						'lookbooks' => 'FL&L Lookbooks',
+						'babes' => 'FL&L Babes',
+						'models' => 'FL&L Model Muses',
+					),
+				),
+			),
+
+		),
+		
+		'primary key' => array('id'),
+
+	);
+
+	$schema['taxi_location'] = array(
+
+		'description' => 'Base table for location',
+
+		'fields' => array(
+
+			'name' => array(
+				'type' => 'varchar',
+				'length' => 255,
+				'not null' => TRUE,
+				'form' => array(
+					'#type' => 'textfield',
+					'#title' => 'Store Name',
+					'#required' => TRUE,
+				),
+			),
+
+			'address' => array(
+				'type' => 'text',
+				'size' => 'medium',
+				'form' => array(
+					'#type' => 'textarea',
+					'#title' => 'Address',
+					'#required' => TRUE,
+				),
+			),
+
+			'formatted_address' => array(
+				'type' => 'text',
+				'size' => 'medium',
+			),
+
+			'store_link' => array(
+				'type' => 'varchar',
+				'length' => 255,
+				'not null' => TRUE,
+				'default' => '',
+				'form' => array(
+					'#type' => 'textfield',
+					'#title' => 'Store Link' 
+				 ),	 
+			),
+
+			'latitude' => array(
+				'type' => 'varchar',
+				'length' => 255,
+				'not null' => TRUE,
+				'default' => '',
+			),
+
+			'longitude' => array(
+				'type' => 'varchar',
+				'length' => 255,
+				'not null' => TRUE,
+				'default' => '',
+			),
+
+		),
+		
+		'primary key' => array('id'),
+		
+	);
+
+	/*
+	 * Default fields
+	 *
+	 * This array of fields will be added onto the beginning of all schemas.
+	 */
+	$defaults = array(
+
+		'id' => array(
+			'type' => 'serial',
+			'unsigned' => TRUE,
+			'not null' => TRUE,
+			'form' => array(
+				'#type' => 'hidden',
+			),
+		),
+	
+		'created' => array(
+			'type' => 'int',
+			'unsigned' => TRUE,
+			'not null' => TRUE,
+			'default' => 0
+		),
+	
+		'changed' => array(
+			'type' => 'int',
+			'unsigned' => TRUE,
+			'not null' => TRUE,
+			'default' => 0,
+		),
+	
+		'uid' => array(
+			'type' => 'int',
+			'unsigned' => TRUE,
+		),
+		
+		'type' => array(
+			'type' => 'varchar',
+			'length' => 255,
+			'not null' => TRUE,
+			'default' => '',
+		),
+		
+		'type_label' => array(
+			'type' => 'varchar',
+			'length' => 255,
+			'not null' => TRUE,
+			'default' => '',
+		),
+
+	);
+
+	// Loop through schema
+	foreach ( $schema as $index => $item_schema ) {
+		
+		// Merge default fields onto fields array
+		$schema[$index]['fields'] = array_merge($defaults, $schema[$index]['fields']);
+
+		// Add primary key
+		$schema[$index]['primary key'] = array('id');
+
+	}
+
+	return $schema;
+
+}
