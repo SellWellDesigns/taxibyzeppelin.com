@@ -80,6 +80,7 @@ function taxi_home_page_build(){
 	$html = "
 		$bg_slider
 		<div id=\"main-content\">
+			<div id=\"start-section\"></div>
 			$about
 			$companies
 			$footer

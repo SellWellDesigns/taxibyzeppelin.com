@@ -5,9 +5,24 @@
 		// Init
 	 	var	
 				$window     = $(window),
-				$nav        = $('#nav a'),
-				$flexslider = $('.flexslider');
+				$nav        = $("#nav a"),
+				$flexslider = $(".flexslider");
 
+
+		// ----------------------------------------------------------
+		// "Hey window...how big are you?"
+		// ----------------------------------------------------------
+		// $(window).resize(function() {
+		  
+		//   // Height and Width vars	
+		// 	var winHeight = $window.height();
+		// 	var $bgSlider = $("#bg-slider");
+
+		// 	$bgSlider.css("height", winHeight);
+
+		// 	console.log(winHeight);
+
+		// });
 
 
 		// ----------------------------------------------------------
@@ -49,7 +64,7 @@
 		// Flexslider init
 		// ----------------------------------------------------------
     $flexslider.flexslider({ 
-      		
+
   		directionNav: false 
 
     });
