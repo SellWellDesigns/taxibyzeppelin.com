@@ -1,0 +1,29 @@
+<?php
+
+/**
+* @file
+*
+* Homepage load
+*
+*/
+
+/**
+*	Implements hook_menu()
+*/
+function taxi_home_menu(){
+
+	$items = array();
+	
+	// Homepage
+	$items['homepage'] = array(
+		'title' => t('TAXI'),
+		'page callback' => 'taxi_home_page_build',
+		'file' => 'taxi_home_page_build.inc',
+		'access arguments' => array('access content'),
+		'type' => MENU_CALLBACK,
+	);
+	
+	return $items;
+	
+}
+
