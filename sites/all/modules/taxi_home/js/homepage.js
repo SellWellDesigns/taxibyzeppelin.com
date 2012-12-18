@@ -181,6 +181,7 @@
 			}, 2000)
 
 			taxi.init();
+			
 		})
 
 		.scroll(function(){
@@ -191,10 +192,6 @@
 
 
 
-
-
-
-			
 
 			// $(document).scroll(function(){
 
