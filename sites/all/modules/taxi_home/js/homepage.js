@@ -2,7 +2,9 @@
     
 	// Init vars
 	var $window   = $(window),
-			$document = $(document);
+			$document = $(document),
+			$loader   = $("div#loader");
+			$html     = $("html");
 
 	// TAXI
 	var taxi = {
@@ -20,9 +22,15 @@
 			self.$nav.on("click", self.scrollTo);
 
 			self.bgSlideshow();
+			self.googleMap();
 
 		},
 
+
+
+		//
+		// Change up dat background already!
+		//
 		bgSlideshow: function(){
 
 			var self = this;
@@ -50,98 +58,18 @@
 
 			}, 7000);
 
-
 		},
 
-		googleMap: function(){},
-
-		scrollTo: function(event){
-
-			var self = taxi;
-
-			// Init
-			var $link = $(this);
-
-			// Scroll to href of clicked link
-			$("html, body").stop().animate({
-
-        scrollTop: $($link.attr("href")).offset().top + 30
-
-      }, 1500,'easeInOutExpo');
-
-			event.preventDefault();
-
-		},
-
-		setActiveSection: function(){}
-		
-	}
 
 
-	$window.load(function(){
+		//
+		// We are talking about a real live map here
+		//
+		googleMap: function(){
 
-		taxi.init();
+			var self = this;
 
-	});
-
-
-
-	$(document).ready(function(){	
-
-
-
-
-		// ----------------------------------------------------------
-		// Where am i? 
-		// ----------------------------------------------------------
-		(function(){
-
-			var sections  = {},
-					$this     = $(this);
-					winHeight = $window.height(),
-					$nav      = $("#nav"),
-					$navItem  = $("#nav li a"),
-					i 				= 0;
-
-			// Grab the position of all our sections
-			$(".section").each(function(){
-
-				sections[this.id] = $(this).offset().top;
-
-				console.log(sections[this.id]);
-
-			})
-
-			$(document).scroll(function(){
-
-				var pos = $this.scrollTop();
-
-				//console.log(pos);
-
-				for ( i in sections ) {
-
-					if ( sections[i] > pos && sections[i] < pos + winHeight ) {
-
-						//$navItem
-
-					} 
-				
-				} 
-
-
-			})
-
-
-		});
-
-
-
-		// ----------------------------------------------------------
-		// Google Map
-		// ----------------------------------------------------------
-		(function initialize() {
-
-				// Lat long of store
+			// Lat long of store
 				var Latlng = new google.maps.LatLng(39.772213,-104.982498);
 
 				// Google map styles array
@@ -179,20 +107,110 @@
 			      position: Latlng,
 			      map: map
 			      //animation: google.maps.Animation.DROP
-			      //title:"Berkeley Supply"
+			      //title:"TAXI"
 			  });
 
 			  //Associate the styled map with the MapTypeId and set it to display.
 			  map.mapTypes.set('map_style', styledMap);
 			  map.setMapTypeId('map_style');
 
-     });
+		},
+
+
+
+		//
+		// Ohhhhhh baby that is some smooth scrolling
+		//
+		scrollTo: function(event){
+
+			var self = taxi;
+
+			// Init
+			var $link = $(this);
+
+			// Scroll to href of clicked link
+			$("html, body").stop().animate({
+
+        scrollTop: $($link.attr("href")).offset().top + 30
+
+      }, 1500,'easeInOutExpo');
+
+			event.preventDefault();
+
+		},
+
+
+
+		//
+		// Just tell me where i am dammit!
+		//
+		setActiveSection: function(){
+
+			var sections  = {},
+					$this     = $(this);
+					winHeight = $window.height(),
+					$nav      = $("#nav"),
+					$navItem  = $("#nav li a"),
+					i 				= 0;
+
+			// Grab the position of all our sections
+			$(".section").each(function(){
+
+				sections[this.id] = $(this).offset().top;
+
+				console.log(sections[this.id]);
+
+			})
+
+
+		}
+		
+	}
+
+
+	//
+	// All ready.. lets do this dance
+	//
+	$window
+		.load(function(){
+
+			setTimeout(function() {
+
+				$loader.fadeOut();
+
+			}, 2000)
+
+			taxi.init();
+			
+		})
+
+		.scroll(function(){
+
+			console.log('scrolling');
+
+		})
 
 
 
 
+			// $(document).scroll(function(){
 
-	});
+			// 	var pos = $this.scrollTop();
+
+			// 	//console.log(pos);
+
+			// 	for ( i in sections ) {
+
+			// 		if ( sections[i] > pos && sections[i] < pos + winHeight ) {
+
+			// 			//$navItem
+
+			// 		} 
+				
+			// 	} 
+
+
+			// })
 
 
 }( jQuery, window, document));
