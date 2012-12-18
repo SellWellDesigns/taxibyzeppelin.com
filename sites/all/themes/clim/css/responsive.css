@@ -189,8 +189,7 @@
   input.span3, textarea.span3, .uneditable-input.span3 { width: 152px; }
   input.span2, textarea.span2, .uneditable-input.span2 { width: 90px; }
   input.span1, textarea.span1, .uneditable-input.span1 { width: 28px; } }
-@media (max-width: 767px) { body { padding-right: 20px; padding-left: 20px; }
-  .container-fluid { padding: 0; }
+@media (max-width: 767px) { .container-fluid { padding: 0; }
   .dl-horizontal dt { float: none; width: auto; clear: none; text-align: left; }
   .dl-horizontal dd { margin-left: 0; }
   .container { width: auto; }

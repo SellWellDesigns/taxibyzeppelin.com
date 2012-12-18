@@ -8,7 +8,6 @@ $nav = '';
 // Output nav markup
 $nav = "
 	<ul>
-		<li><a href=\"html\">TAXI</a></li>
 		<li><a href=\"#about\">About</a></li>
 		<li><a href=\"#companies\">Companies</a></li>
 		<li><a href=\"#contact\">Contact</a></li>

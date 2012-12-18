@@ -1,41 +1,100 @@
 ;(function( $, window, document, undefined ){
     
+	// Init vars
+	var $window   = $(window),
+			$document = $(document);
+
+	// TAXI
+	var taxi = {
+
+		init: function(){
+
+			var self = this;
+
+			self.$nav         = $("#nav a");
+			self.$bgPhoto     = $("div.slide");
+			self.currentSlide = 0;
+			self.totalSlides  = self.$bgPhoto.length;
+
+			// Attach click handlers
+			self.$nav.on("click", self.scrollTo);
+
+			self.bgSlideshow();
+
+		},
+
+		bgSlideshow: function(){
+
+			var self = this;
+
+			self.$bgPhoto
+				.eq(self.currentSlide)
+				.addClass("current")
+				.css("display", "block");
+
+			// Set interval for slideshow
+			setInterval(function(){
+
+				$("div.current")
+					.removeClass("current")
+					.fadeOut(2000, 'easeInOutQuad');
+
+				if ( currentSlide === totalSlides  - 1 ) currentSlide = 0;
+
+			 	else currentSlide++;
+
+				self.$bgPhoto
+					.eq(currentSlide)
+					.addClass("current")
+					.fadeIn(2000, 'easeInOutQuad');
+
+			}, 4000);
+
+
+		},
+
+		googleMap: function(){},
+
+		scrollTo: function(event){
+
+			var self = taxi;
+
+			// Init
+			var $link = $(this);
+
+			// Scroll to href of clicked link
+			$("html, body").stop().animate({
+
+        scrollTop: $($link.attr("href")).offset().top + 30
+
+      }, 1500,'easeInOutExpo');
+
+			event.preventDefault();
+
+		},
+
+		setActiveSection: function(){}
+		
+	}
+
+
+	$window.load(function(){
+
+		taxi.init();
+
+	});
+
+
+
 	$(document).ready(function(){	
 
-		// Init
-	 	var	
-				$window     = $(window),
-				$nav        = $("#nav a"),
-				$flexslider = $(".flexslider");
 
-		// ----------------------------------------------------------
-		// This scrolling is so damn smooth...mmmmmmm
-		// ----------------------------------------------------------
-		$(function(){
-
-			$nav.on('click', function(event) {
-
-				// Init
-				var $link = $(this);
-
-				// Scroll to href of clicked link
-				$('html, body').stop().animate({
-
-	          scrollTop: $($link.attr('href')).offset().top - 80
-
-	      }, 1500,'easeInOutExpo');
-
-				event.preventDefault();
-
-			});
-
-		});
 
 
 		// ----------------------------------------------------------
 		// Where am i? 
 		// ----------------------------------------------------------
-		$(function(){
+		(function(){
 
 			var sections  = {},
 					$this     = $(this);
@@ -77,49 +136,26 @@
 
 
 		// ----------------------------------------------------------
-		// This pic is stellar
+		// Put on a slideshow for me monkey, slide!!!
 		// ----------------------------------------------------------
-		$(function(){
+		$bgPhoto.eq(currentSlide).addClass("current").css("display", "block");
 
-			$.stellar();
+		function bgSlideshow() {
 
-		});
+			// Set interval for slideshow
+			looper = setInterval(function(){
 
-	
-		// ----------------------------------------------------------
-		// Flexslider init
-		// ----------------------------------------------------------
-    $flexslider.flexslider({ 
+				$("div.current").removeClass("current").fadeOut(2000, 'easeInOutQuad');
 
-  		directionNav: false 
+				if ( currentSlide == totalSlides  - 1 ) currentSlide = 0;
 
-    });
+			 	else currentSlide++;
 
+				$bgPhoto.eq(currentSlide).addClass("current").fadeIn(2000, 'easeInOutQuad');
 
-    // ----------------------------------------------------------
-		// Scroller magic
-		// ----------------------------------------------------------
-  //   $(function setScroller() {
+			}, 4000);
 
-		// 	var $flexslider_pos = $flexslider.position().top;
-
-		// 	var $scroller_pos = $flexslider.position().top;
-
-		// 	console.log(top);
-
-			
-		// 	if( browserW > 767) {
-
-		// 		changeColorIdentity();
-
-		// 	}
-		// });
-
-		// function changeColorIdentity() {
-			
-		// 	$nav.css("color", "white");
-
-		// }
+		}
 
 
 
@@ -127,18 +163,18 @@
 		// ----------------------------------------------------------
 		// Google Map
 		// ----------------------------------------------------------
-		$(function initialize() {
+		(function initialize() {
 
 				// Lat long of store
-				var Latlng = new google.maps.LatLng(39.774764,-105.044083);
+				var Latlng = new google.maps.LatLng(39.772213,-104.982498);
 
 				// Google map styles array
 				var styles = [
 				  {
 				    "stylers": [
-				      { "saturation": -100 },
-				      { "gamma": 0.69 },
-				      { "weight": 0.9 },
+				      { "saturation": -50 },
+				      { "gamma": 0 },
+				      { "weight": 0.3 },
 				      { "visibility": "on" }
 				    ]
 				  }

@@ -14,6 +14,7 @@ function taxi_home_page_build(){
 	$logo_grouped = '';
 	$html         = '';
 	$slider_imgs  = '';
+  $bg_slides    = '';
 
 
 	// Adding javascript
@@ -28,68 +29,136 @@ function taxi_home_page_build(){
 	$js_path = "$module_path/js/jquery.flexslider-min.js";
 	drupal_add_js($js_path, array('scope' => 'footer', 'weight' => 3));
 
-  // Build query for brands
-  $brands_query_string = "
-  	SELECT i.field_brand_logo_fid, i.delta, f.fid, f.uri
-		FROM field_data_field_brand_logo AS i
-		JOIN file_managed AS f
-		ON i.field_brand_logo_fid = f.fid
-		ORDER BY i.delta ASC
+  // Build query for slider images
+  $slider_query_string = "
+  	SELECT c.fid, c.weight, c.parent_type, f.fid, f.uri
+    FROM cirro_multi_img AS c
+    JOIN file_managed AS f
+    ON c.fid = f.fid
+    ORDER BY c.weight
+  ";
+
+  // Home page query string
+  $home_query_string = "
+    SELECT intro_body, address, leasing_info
+    FROM taxi_home_page
+  ";
+
+  // Company item query string 
+  $company_query_string = "
+    SELECT title, link, building
+    FROM taxi_company_item
+    ORDER BY building, title
   ";
   
   // Use drupal's db_query function 
-  // $brands_query = db_query( $brands_query_string );
-  // $brand_items = $brands_query->fetchAll();
+  $slider_query = db_query( $slider_query_string );
+  $slider_items = $slider_query->fetchAll();
 
+  // Use drupal's db_query function 
+  $home_query = db_query( $home_query_string );
+  $home_items = $home_query->fetchAll();
+
+  // Use drupal's db_query function 
+  $company_query = db_query( $company_query_string );
+  $company_items = $company_query->fetchAll();
+
+  //dsm($company_items);
+
+  // Loop through compant items to build list
+  foreach ($company_items as $key => $value) {
+    
+      $company = $value->title;
+      $company_url = $value->link;
+      $building = $value->building;
+
+      $building_title = NULL;
+
+
+  }
+
+  // Home Page vars
+  $intro_body   = $home_items[0]->intro_body;
+  $address      = $home_items[0]->address;
+  $leasing_info = $home_items[0]->leasing_info;
+
+  // Loop through and build images
+  foreach ( $slider_items as $key => $value ) {
+
+    $uri = $value->uri;
+    $img_path = file_create_url($uri);
+
+    // Build slide markup
+    $bg_slides .= "
+      <div id=\"slide_01\" class=\"slide\" style=\"background-image: url($img_path); display: none;\"></div>
+    ";
+
+  }
+
+  // Background slides with wrapper
   $bg_slider = "
   	<section id=\"bg-slider\" class=\"section\">
-  		<div class=\"slice-wrap\">
-  			<img src=\"//taxibyzeppelin.com/TAXI_homepage_backgroundimage.gif\" />
-  		</div>
+  		$bg_slides
   	</section>
+  ";
+
+  // Add $window var to sections that you want a break in sections
+  $window = "
+  	<section class=\"slide-window\"></section>
   ";
 
 
   $about = "
   	<section id=\"about\" class=\"section text-center\">
-  		<div class=\"slice-wrap\">
-  			<img src=\"/sites/all/themes/clim/images/slices.png\" class=\"slice\"/>
-  		</div>
+  			<img src=\"/sites/all/themes/clim/images/slice01.png\" class=\"slice\"/>
   		<article class=\"content-section\">
   			<h1>About</h1>
-  
+        <div class=\"body-text\">
+          $intro_body
+        </div>
   		</article>
+  		<img src=\"/sites/all/themes/clim/images/slice02.png\" class=\"slice\"/>
   	</section>
   ";
 
   $companies = "
   	<section id=\"companies\" class=\"section text-center\">
-  		<img src=\"/sites/all/themes/clim/images/slices.png\" class=\"slice\"/>
+  		<img src=\"/sites/all/themes/clim/images/slice03.png\" class=\"slice\"/>
   		<article class=\"content-section\">
   			<h1>Companies</h1>
 
   		</article>
+      <img src=\"/sites/all/themes/clim/images/slice04.png\" class=\"slice\"/>
   	</section>
   ";
 
-  $footer = "
-  	<footer id=\"footer\" class=\"section text-center\">
-		  	
-		</footer> 
+  $contact = "
+  	<section id=\"contact\" class=\"section text-center\">
+      <img src=\"/sites/all/themes/clim/images/slice05.png\" class=\"slice\"/>
+      <article class=\"content-section\">
+        <h1>Contact</h1>
+        $address
+        $leasing_info
+      </article>
+      <img src=\"/sites/all/themes/clim/images/slice06.png\" class=\"slice\"/>
+		</section> 
   ";
-
 
   $map = "
   	 <div id=\"map_canvas\" style=\"width:100%; height:100%\"></div>
   ";
 
+  // Putting everything together :)
 	$html = "
 		$bg_slider
 		<div id=\"main-content\">
 			<div id=\"start-section\"></div>
 			$about
+			$window
 			$companies
-			$footer
+			$window
+			$contact
+			$window
 			$map
 		</div>
 	";

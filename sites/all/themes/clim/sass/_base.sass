@@ -456,6 +456,7 @@ h1, h2, h3, h4, h5, h6
 	font-weight: $headingsFontWeight
 	line-height: 1
 	color: $headingsColor
+	text-transform: uppercase
 	text-rendering: optimizelegibility
 
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small
@@ -466,6 +467,8 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small
 h1
 	font-size: 36px
 	line-height: 40px
+	margin-bottom: 50px
+	letter-spacing: 0.1em
 
 h2
 	font-size: 30px
@@ -2729,6 +2732,11 @@ button.btn.btn-mini, input[type="submit"].btn.btn-mini
 
 .alert,
 div.messages
+	position: fixed
+	z-index: 1000
+	top: 30px
+	width: 80%
+	left: 2%
 	padding: 8px 35px 8px 14px
 	margin-bottom: 20px
 	color: $orange

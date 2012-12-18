@@ -1,3 +1,6 @@
+<div id="logo">
+  <a href="#"><img src="/sites/all/themes/clim/images/logo.png"/></a>
+</div>
 <header id="main-menu">
   <nav id="nav">
     <?php include 'menu.inc'; ?>

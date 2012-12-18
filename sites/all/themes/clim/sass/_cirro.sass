@@ -76,44 +76,63 @@
 		font-size: 12px
 		font-weight: 300
 		
-		
+::selection
+	background: $yellow
+
+::-moz-selection
+	background: $yellow
 		
 //  Purrrdy Stuff
 // ----------------------------------------------------------------------------
 
+.slide
+	position: absolute
+	top: 0
+	left: 0
+	+background-size(cover)
+	background-repeat: no-repeat
+	height: 100%
+	width: 100%
+
+#logo
+	position: fixed
+	top: 100px
+	left: 9%
+	width: 65px
+	z-index: 600
+
 #main-menu 
 	position: fixed
-	top: 20px
-	left: 20px
+	top: 100px
+	right: 15px
 	z-index: 600
 	ul
 		list-style: none
 		margin: 0
 		li 
 			margin-bottom: 15px
+			text-align: right
 			a
 				color: black
+				font-size: 12px
 				font-weight: bold
 				text-transform: uppercase
 				&.active
-
-
+					border-bottom: 2px solid
 
 article.content-section
-	height: 1200px
-	margin-bottom: 500px
-	margin-top: -12px 
-	background: white
+	padding: 100px 0
+	margin-bottom: 0
+	background: $grayLight
+
+.body-text
+	font-family: $monospaceFontFamily
+	width: 80%
+	margin: 0 auto
+	max-width: 600px
 
 section img.slice
 	width: 100%
-
-#about
-	margin-top: -150px
-	.slice-wrap
-		height: 195px
-		overflow: hidden
-
 
 #bg-slider
 	position: fixed
@@ -132,12 +151,19 @@ section img.slice
 	width: 100%
 	display: block
 
+#about
+	margin-top: -150px
+
+
 #main-content
 	position: absolute
 	height: 100%
 	width: 100%
 	display: block
 	z-index: 500
+
+.slide-window
+	height: 700px
 
 #map_canvas
 	min-height: 700px
