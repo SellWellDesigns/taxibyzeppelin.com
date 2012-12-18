@@ -37,7 +37,7 @@
 
 				$("div.current")
 					.removeClass("current")
-					.fadeOut(2000, 'easeInOutQuad');
+					.fadeOut(1000, 'easeInOutQuad');
 
 				if ( self.currentSlide === self.totalSlides  - 1 ) self.currentSlide = 0;
 
@@ -46,9 +46,9 @@
 				self.$bgPhoto
 					.eq(self.currentSlide)
 					.addClass("current")
-					.fadeIn(2000, 'easeInOutQuad');
+					.fadeIn(1000, 'easeInOutQuad');
 
-			}, 4000);
+			}, 7000);
 
 
 		},
