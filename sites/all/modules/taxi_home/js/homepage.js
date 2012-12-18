@@ -39,12 +39,12 @@
 					.removeClass("current")
 					.fadeOut(2000, 'easeInOutQuad');
 
-				if ( currentSlide === totalSlides  - 1 ) currentSlide = 0;
+				if ( self.currentSlide === self.totalSlides  - 1 ) self.currentSlide = 0;
 
-			 	else currentSlide++;
+			 	else self.currentSlide++;
 
 				self.$bgPhoto
-					.eq(currentSlide)
+					.eq(self.currentSlide)
 					.addClass("current")
 					.fadeIn(2000, 'easeInOutQuad');
 
@@ -133,30 +133,6 @@
 
 
 		});
-
-
-		// ----------------------------------------------------------
-		// Put on a slideshow for me monkey, slide!!!
-		// ----------------------------------------------------------
-		$bgPhoto.eq(currentSlide).addClass("current").css("display", "block");
-
-		function bgSlideshow() {
-
-			// Set interval for slideshow
-			looper = setInterval(function(){
-
-				$("div.current").removeClass("current").fadeOut(2000, 'easeInOutQuad');
-
-				if ( currentSlide == totalSlides  - 1 ) currentSlide = 0;
-
-			 	else currentSlide++;
-
-				$bgPhoto.eq(currentSlide).addClass("current").fadeIn(2000, 'easeInOutQuad');
-
-			}, 4000);
-
-		}
-
 
 
 
