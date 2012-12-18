@@ -126,7 +126,7 @@ function taxi_home_page_build(){
   		<img src=\"/sites/all/themes/clim/images/slice03.png\" class=\"slice\"/>
   		<article class=\"content-section\">
   			<h1>Companies</h1>
-
+          
   		</article>
       <img src=\"/sites/all/themes/clim/images/slice04.png\" class=\"slice\"/>
   	</section>
