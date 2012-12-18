@@ -1632,6 +1632,9 @@ section img.slice { width: 100%; }
 
 #map_canvas { min-height: 700px; }
 
+#companies .buildings-wrapper .building { width: 20%; float: left; }
+#companies .buildings-wrapper .building h4 { float: left; }
+
 .clearfix { *zoom: 1; }
 .clearfix:before { display: table; line-height: 0; content: ""; }
 .clearfix:after { display: table; line-height: 0; content: ""; clear: both; }
