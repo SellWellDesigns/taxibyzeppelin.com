@@ -63,7 +63,7 @@ function taxi_home_page_build(){
   $company_query = db_query( $company_query_string );
   $company_items = $company_query->fetchAll();
 
-  //dsm($company_items);
+  dsm($company_items);
 
   // Loop through compant items to build list
   foreach ($company_items as $key => $value) {
