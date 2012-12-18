@@ -12,6 +12,4 @@
 	<?php print render($page['content']) ?>
 </div>
 
-<footer id="footer">
- 
-</footer> 
+<div id="loader"></div>
