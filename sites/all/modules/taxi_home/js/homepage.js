@@ -23,6 +23,7 @@
 
 			self.bgSlideshow();
 			self.googleMap();
+			self.setActiveSection();
 
 		},
 
@@ -181,12 +182,12 @@
 			}, 2000)
 
 			taxi.init();
-			
+
 		})
 
 		.scroll(function(){
 
-			console.log('scrolling');
+			//console.log('scrolling');
 
 		})
 
