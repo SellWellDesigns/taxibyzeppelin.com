@@ -66,7 +66,7 @@ function taxi_home_page_build(){
   $company_items = $company_query->fetchAll();
 
   // Loop through compant items to build list
-  foreach ($company_items as $value) {
+  foreach ( $company_items as $value ) {
     
     // Init
     $company = '';
@@ -78,10 +78,11 @@ function taxi_home_page_build(){
     $company = $value->title;
     $company_url = $value->link;
     $building = $value->building;
-    $link = l($company, $company_url);
+    $options = array( 'html' => TRUE );
+    $link = l( "<p>$company</p>", $company_url, $options );
 
     // Load markup into appropriate array slot
-    if (isset($all_companies[$building])) {
+    if ( isset( $all_companies[$building] ) ) {
       
       $all_companies[$building] .= "
         <div class=\"company-link\">$link</div>
@@ -98,7 +99,7 @@ function taxi_home_page_build(){
   }
 
   // Build companies markup
-  foreach($all_companies as $building => $companies) {
+  foreach( $all_companies as $building => $companies ) {
     
     $companies_markup .= "
       <div class=\"building\">
