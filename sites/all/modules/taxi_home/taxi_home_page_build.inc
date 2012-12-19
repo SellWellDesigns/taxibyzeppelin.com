@@ -15,6 +15,8 @@ function taxi_home_page_build(){
 	$html         = '';
 	$slider_imgs  = '';
   $bg_slides    = '';
+  $all_companies = array();
+  $companies_markup = '';
 
 
 	// Adding javascript
@@ -63,17 +65,48 @@ function taxi_home_page_build(){
   $company_query = db_query( $company_query_string );
   $company_items = $company_query->fetchAll();
 
-  //dsm($company_items);
-
   // Loop through compant items to build list
-  foreach ($company_items as $key => $value) {
+  foreach ( $company_items as $value ) {
     
-      $company = $value->title;
-      $company_url = $value->link;
-      $building = $value->building;
+    // Init
+    $company = '';
+    $company_url = '';
+    $building = '';
+    $link = '';
 
-      $building_title = NULL;
+    // Get Data
+    $company = $value->title;
+    $company_url = $value->link;
+    $building = $value->building;
+    $options = array( 'html' => TRUE );
+    $link = l( "<p>$company</p>", $company_url, $options );
 
+    // Load markup into appropriate array slot
+    if ( isset( $all_companies[$building] ) ) {
+      
+      $all_companies[$building] .= "
+        <div class=\"company-link\">$link</div>
+      ";
+
+    } else {
+      
+      $all_companies[$building] = "
+        <div class=\"company-link\">$link</div>
+      ";
+
+    }
+
+  }
+
+  // Build companies markup
+  foreach( $all_companies as $building => $companies ) {
+    
+    $companies_markup .= "
+      <div class=\"building\">
+        <h4>$building</h4>
+        <div class=\"companies-list\">$companies</div>
+      </div>
+    ";
 
   }
 
@@ -121,12 +154,14 @@ function taxi_home_page_build(){
   	</section>
   ";
 
-  $companies = "
+  $company_section = "
   	<section id=\"companies\" class=\"section text-center\">
   		<img src=\"/sites/all/themes/clim/images/slice03.png\" class=\"slice\"/>
   		<article class=\"content-section\">
   			<h1>Companies</h1>
-          
+        <div class=\"buildings-wrapper\">
+          $companies_markup
+        </div>
   		</article>
       <img src=\"/sites/all/themes/clim/images/slice04.png\" class=\"slice\"/>
   	</section>
@@ -155,7 +190,7 @@ function taxi_home_page_build(){
 			<div id=\"start-section\"></div>
 			$about
 			$window
-			$companies
+			$company_section
 			$window
 			$contact
 			$window
