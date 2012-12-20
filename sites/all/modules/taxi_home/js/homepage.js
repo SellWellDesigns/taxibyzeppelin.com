@@ -157,6 +157,11 @@
 			// Grab the position of all our sections
 			$(".section").each(function(){
 
+
+
+
+				
+
 				sections[this.id] = $(this).offset().top;
 
 			})

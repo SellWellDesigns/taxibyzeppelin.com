@@ -143,39 +143,54 @@ function taxi_home_page_build(){
 
   $about = "
   	<section id=\"about\" class=\"section text-center\">
-  			<img src=\"/sites/all/themes/clim/images/slice01.png\" class=\"slice\"/>
+  	   <div class=\"tri tri-top\"></div>
   		<article class=\"content-section\">
   			<h1>About</h1>
         <div class=\"body-text\">
           $intro_body
         </div>
   		</article>
-  		<img src=\"/sites/all/themes/clim/images/slice02.png\" class=\"slice\"/>
+      <div class=\"tri tri-bottom\"></div>
   	</section>
   ";
 
   $company_section = "
   	<section id=\"companies\" class=\"section text-center\">
-  		<img src=\"/sites/all/themes/clim/images/slice03.png\" class=\"slice\"/>
+  		<div class=\"tri tri-top\"></div>
   		<article class=\"content-section\">
   			<h1>Companies</h1>
         <div class=\"buildings-wrapper\">
           $companies_markup
         </div>
   		</article>
-      <img src=\"/sites/all/themes/clim/images/slice04.png\" class=\"slice\"/>
+      <div class=\"tri tri-bottom\"></div>
   	</section>
+  ";
+
+  $social = "
+    <div id=\"social-btns\">
+      <a href=\"###\">
+        <span class=\"social\" data-icon=\"&#62220;\"></span>
+      </a>
+      <a href=\"###\">
+        <span class=\"social\" data-icon=\"&#62217;\"></span>
+      </a>
+      <a href=\"###\">
+        <span class=\"social\" data-icon=\"&#62253;\"></span>
+      </a>
+    </div>
   ";
 
   $contact = "
   	<section id=\"contact\" class=\"section text-center\">
-      <img src=\"/sites/all/themes/clim/images/slice05.png\" class=\"slice\"/>
+      <div class=\"tri tri-top\"></div>
       <article class=\"content-section\">
         <h1>Contact</h1>
         $address
         $leasing_info
+        $social
       </article>
-      <img src=\"/sites/all/themes/clim/images/slice06.png\" class=\"slice\"/>
+      <div class=\"tri tri-bottom\"></div>
 		</section> 
   ";
 
