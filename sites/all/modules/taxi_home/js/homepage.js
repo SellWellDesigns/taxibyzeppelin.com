@@ -159,10 +159,33 @@
 
 				sections[this.id] = $(this).offset().top;
 
-				console.log(sections[this.id]);
+			})
+			
+			$(window).scroll(function(){
+
+				var pos = $(this).scrollTop();
+
+				for ( i in sections ) {
+
+					if ( sections[i] > pos && sections[i] < pos + winHeight ) {
+
+						var $active = $('#nav a.active');
+
+						// Remove other active class if necessary
+						if ($active.hasClass(i)){
+						  
+						  $('#nav a.active').removeClass('active');
+
+						}
+
+						// Add new active class
+						$( '#nav a.' + i ).addClass('active');
+
+					} 
+				
+				} 
 
 			})
-
 
 		}
 		
@@ -191,27 +214,6 @@
 
 		})
 
-
-
-
-			// $(document).scroll(function(){
-
-			// 	var pos = $this.scrollTop();
-
-			// 	//console.log(pos);
-
-			// 	for ( i in sections ) {
-
-			// 		if ( sections[i] > pos && sections[i] < pos + winHeight ) {
-
-			// 			//$navItem
-
-			// 		} 
-				
-			// 	} 
-
-
-			// })
 
 
 }( jQuery, window, document));
