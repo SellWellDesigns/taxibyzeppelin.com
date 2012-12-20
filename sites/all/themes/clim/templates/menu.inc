@@ -12,6 +12,7 @@ $nav = "
 		<li><a href=\"#companies\">Companies</a></li>
 		<li><a href=\"#contact\">Contact</a></li>
 		<li><a href=\"#map_canvas\">Map</a></li>
+		<li><a href=\"http://blog.taxibyzeppelin.com/\">Blog</a></li>
 	</ul>
 ";
 

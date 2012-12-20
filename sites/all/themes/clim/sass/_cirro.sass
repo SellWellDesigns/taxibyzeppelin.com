@@ -5,6 +5,13 @@
 //  General Classes
 // ----------------------------------------------------------------------------
 
+@font-face
+	font-family: 'EntypoSocial'
+	src: url('../fonts/entypo-social.eot')
+	src: url('../fonts/entypo-social.eot?#iefix') format("embedded-opentype"), url('../fonts/entypo-social.woff') format("woff"), url('../fonts/entypo-social.ttf') format("truetype"), url('../fonts/entypo-social.svg#EntypoRegular') format("svg")
+	font-weight: normal
+	font-style: normal
+
 .fixed
 	position: fixed
 
@@ -58,6 +65,13 @@
 		width: 10px
 		background: url(../images/loading_small.gif) no-repeat center center
 
+.tri
+	width: 120%
+	background: $grayLight
+	position: relative
+	z-index: 300
+	left: -5%
+
 
 //  Drupal Overrides
 // ----------------------------------------------------------------------------
@@ -88,6 +102,13 @@
 //  Purrrdy Stuff
 // ----------------------------------------------------------------------------
 
+#main-content
+	position: absolute
+	height: 100%
+	width: 100%
+	display: block
+	z-index: 500
+
 #loader
 	position: fixed
 	z-index: 2000
@@ -98,6 +119,9 @@
 	height: 100%
 	width: 100%
 	background: url(../images/loader.gif) no-repeat center center black
+
+.slide-window
+	height: 700px
 
 .slide
 	position: absolute
@@ -118,7 +142,7 @@
 #main-menu 
 	position: fixed
 	top: 100px
-	right: 15px
+	right: 20px
 	z-index: 600
 	ul
 		list-style: none
@@ -133,20 +157,27 @@
 				text-transform: uppercase
 				&.active
 					border-bottom: 2px solid
+			.social[data-icon]:before
+				font-family: 'EntypoSocial'
+				font-size: 70px
+				font-weight: normal
+				content: attr(data-icon)
+				color: black
+				&:hover
+					color: $yellow
 
 article.content-section
 	padding: 100px 0
 	margin-bottom: 0
 	background: $grayLight
+	position: relative
+	z-index: 400
 
 .body-text
 	font-family: $monospaceFontFamily
 	width: 80%
 	margin: 0 auto
 	max-width: 600px
-
-section img.slice
-	width: 100%
 
 #bg-slider
 	position: fixed
@@ -166,23 +197,41 @@ section img.slice
 	display: block
 
 #about
-	margin-top: -150px
-
-
-#main-content
-	position: absolute
-	height: 100%
-	width: 100%
-	display: block
-	z-index: 500
-
-.slide-window
-	height: 700px
-
-#map_canvas
-	min-height: 700px
+	margin-top: -250px
+	.tri-top
+		transform: rotate(8deg)
+		-ms-transform: rotate(8deg)
+		-moz-transform: rotate(8deg)
+		-webkit-transform: rotate(8deg)
+		-o-transform: rotate(8deg)
+		height: 400px
+		bottom: -200px
+	.tri-bottom
+		transform: rotate(-8deg)
+		-ms-transform: rotate(-8deg)
+		-moz-transform: rotate(-8deg)
+		-webkit-transform: rotate(-8deg)
+		-o-transform: rotate(-8deg)
+		height: 400px
+		top: -200px
 
 #companies
+	.tri-top
+		transform: rotate(5deg)
+		-ms-transform: rotate(5deg)
+		-moz-transform: rotate(5deg)
+		-webkit-transform: rotate(5deg)
+		-o-transform: rotate(5deg)
+		height: 400px
+		bottom: -200px
+	.tri-bottom
+		transform: rotate(-5deg)
+		-ms-transform: rotate(-5deg)
+		-moz-transform: rotate(-5deg)
+		-webkit-transform: rotate(-5deg)
+		-o-transform: rotate(-5deg)
+		height: 400px
+		top: -200px
 	.content-section
 		overflow: hidden
 		.buildings-wrapper
@@ -204,3 +253,49 @@ section img.slice
 								text-align: left
 								padding-right: 6px
 
+#contact
+	.tri-top
+		transform: rotate(8deg)
+		-ms-transform: rotate(8deg)
+		-moz-transform: rotate(8deg)
+		-webkit-transform: rotate(8deg)
+		-o-transform: rotate(8deg)
+		height: 400px
+		bottom: -200px
+	.tri-bottom
+		transform: rotate(8deg)
+		-ms-transform: rotate(8deg)
+		-moz-transform: rotate(8deg)
+		-webkit-transform: rotate(8deg)
+		-o-transform: rotate(8deg)
+		height: 400px
+		top: -200px
+
+#map_canvas
+	min-height: 700px
+
+.page-user
+	.login-wrap
+		width: 300px
+		margin: 100px auto 0 auto
+		input[type="text"], input[type="password"]
+			width: 88%
+		input[type="submit"]
+			border: 2px solid white
+			color: white
+			width: 100%
+			&:hover
+				background: white
+				color: black
+			&:active
+				background: $yellow
+				color: black
+				border: 2px solid $yellow
+		#forgot 
+			margin-top: 50px
+			text-align: center
+			a
+				color: white
+
+.page-user-password #forgot
+	display: none
