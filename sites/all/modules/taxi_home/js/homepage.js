@@ -28,7 +28,6 @@
 		},
 
 
-
 		//
 		// Change up dat background already!
 		//
@@ -60,7 +59,6 @@
 			}, 7000);
 
 		},
-
 
 
 		//
@@ -118,7 +116,6 @@
 		},
 
 
-
 		//
 		// Ohhhhhh baby that is some smooth scrolling
 		//
@@ -141,7 +138,6 @@
 		},
 
 
-
 		//
 		// Just tell me where i am dammit!
 		//
@@ -156,11 +152,6 @@
 
 			// Grab the position of all our sections
 			$(".section").each(function(){
-
-
-
-
-				
 
 				sections[this.id] = $(this).offset().top;
 
@@ -216,13 +207,6 @@
 			taxi.init();
 
 		})
-
-		.scroll(function(){
-
-			//console.log('scrolling');
-
-		})
-
 
 
 }( jQuery, window, document));
