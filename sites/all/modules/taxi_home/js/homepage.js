@@ -167,19 +167,23 @@
 
 				for ( i in sections ) {
 
-					if ( sections[i] > pos && sections[i] < pos + winHeight ) {
+					if ( sections[i] > pos && sections[i] < pos + winHeight - 300 ) {
 
 						var $active = $('#nav a.active');
 
 						// Remove other active class if necessary
-						if ($active.hasClass(i)){
+						if ( !$active.hasClass(i) ){
 						  
-						  $('#nav a.active').removeClass('active');
+						  $active.removeClass('active');
 
-						}
+						} 
 
 						// Add new active class
-						$( '#nav a.' + i ).addClass('active');
+						if ( i !== 'start-section' ) {
+						  
+						  $( '#nav a.' + i ).addClass('active');
+						  
+					  }
 
 					} 
 				
