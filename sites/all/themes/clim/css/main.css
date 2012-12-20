@@ -1623,8 +1623,6 @@ a.label:hover, a.badge:hover { color: white; text-decoration: none; cursor: poin
 #main-menu ul li { margin-bottom: 15px; text-align: right; }
 #main-menu ul li a { color: black; font-size: 12px; font-weight: bold; text-transform: uppercase; }
 #main-menu ul li a.active { border-bottom: 2px solid; }
-#main-menu ul li .social[data-icon]:before { font-family: "EntypoSocial"; font-size: 70px; font-weight: normal; content: attr(data-icon); color: black; }
-#main-menu ul li .social[data-icon]:before:hover { color: yellow; }
 
 article.content-section { padding: 100px 0; margin-bottom: 0; background: #ededed; position: relative; z-index: 400; }
 
@@ -1652,6 +1650,9 @@ article.content-section { padding: 100px 0; margin-bottom: 0; background: #edede
 #contact .tri-bottom { transform: rotate(8deg); -ms-transform: rotate(8deg); -moz-transform: rotate(8deg); -webkit-transform: rotate(8deg); -o-transform: rotate(8deg); height: 400px; top: -200px; }
 
 #map_canvas { min-height: 700px; }
+
+#social-btns .social[data-icon]:before { font-family: "EntypoSocial"; font-size: 70px; font-weight: normal; content: attr(data-icon); color: black; }
+#social-btns .social[data-icon]:before:hover { color: yellow; }
 
 .page-user .login-wrap { width: 300px; margin: 100px auto 0 auto; }
 .page-user .login-wrap input[type="text"], .page-user .login-wrap input[type="password"] { width: 88%; }

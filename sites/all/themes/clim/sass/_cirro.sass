@@ -157,14 +157,6 @@
 				text-transform: uppercase
 				&.active
 					border-bottom: 2px solid
-			.social[data-icon]:before
-				font-family: 'EntypoSocial'
-				font-size: 70px
-				font-weight: normal
-				content: attr(data-icon)
-				color: black
-				&:hover
-					color: $yellow
 
 article.content-section
 	padding: 100px 0
@@ -273,6 +265,16 @@ article.content-section
 
 #map_canvas
 	min-height: 700px
+
+#social-btns
+	.social[data-icon]:before
+		font-family: 'EntypoSocial'
+		font-size: 70px
+		font-weight: normal
+		content: attr(data-icon)
+		color: black
+		&:hover
+			color: $yellow
 
 .page-user
 	.login-wrap
