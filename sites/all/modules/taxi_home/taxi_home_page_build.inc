@@ -195,7 +195,9 @@ function taxi_home_page_build(){
   ";
 
   $map = "
-  	 <div id=\"map_canvas\" style=\"width:100%; height:100%\"></div>
+  	<section id=\"map\" class=\"section text-center\">
+      <div id=\"map_canvas\" style=\"width:100%; height:100%\"></div>
+    </section>
   ";
 
   // Putting everything together :)
