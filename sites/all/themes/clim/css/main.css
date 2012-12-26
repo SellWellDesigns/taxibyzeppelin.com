@@ -1649,7 +1649,10 @@ article.content-section { padding: 100px 0; margin-bottom: 0; background: #edede
 #contact .tri-top { transform: rotate(8deg); -ms-transform: rotate(8deg); -moz-transform: rotate(8deg); -webkit-transform: rotate(8deg); -o-transform: rotate(8deg); height: 400px; bottom: -200px; }
 #contact .tri-bottom { transform: rotate(8deg); -ms-transform: rotate(8deg); -moz-transform: rotate(8deg); -webkit-transform: rotate(8deg); -o-transform: rotate(8deg); height: 400px; top: -200px; }
 
-#map_canvas { min-height: 700px; }
+#map #map-info { margin-bottom: 100px; }
+#map #map-info a { color: black; }
+#map #map_canvas { min-height: 700px; margin: 0px auto; }
+#map .tri-top { transform: rotate(-5deg); -ms-transform: rotate(-5deg); -moz-transform: rotate(-5deg); -webkit-transform: rotate(-5deg); -o-transform: rotate(-5deg); height: 400px; top: 200px; }
 
 #social-btns .social[data-icon]:before { font-family: "EntypoSocial"; font-size: 70px; font-weight: normal; content: attr(data-icon); color: black; }
 #social-btns .social[data-icon]:before:hover { color: yellow; }
