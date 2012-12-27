@@ -129,7 +129,7 @@
 			// Scroll to href of clicked link
 			$("html, body").stop().animate({
 
-        scrollTop: $($link.attr("href")).offset().top + 30
+        scrollTop: $($link.attr("href")).offset().top + 300
 
       }, 1500,'easeInOutExpo');
 
@@ -163,7 +163,7 @@
 
 				for ( i in sections ) {
 
-					if ( sections[i] > pos && sections[i] < pos + winHeight - 300 ) {
+					if ( sections[i] > pos - 500 && sections[i] < pos + winHeight - 700 ) {
 
 						var $active = $('#nav a.active');
 

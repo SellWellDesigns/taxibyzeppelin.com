@@ -196,7 +196,18 @@ function taxi_home_page_build(){
 
   $map = "
   	<section id=\"map\" class=\"section text-center\">
-      <div id=\"map_canvas\" style=\"width:100%; height:100%\"></div>
+      <div class=\"tri tri-top\"></div>
+      <article class=\"content-section\">
+        <div id=\"map-info\">
+          <h1>MAP</h1>
+          <h4 class=\"btn\">
+            <a href=\"http://itunes.com/apps/appname\">
+              Download the App
+            </a>
+          </h4>
+        </div>
+        <div id=\"map_canvas\" style=\"width:70%; height:50%\"></div>
+      </article>
     </section>
   ";
 
