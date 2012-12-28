@@ -1,5 +1,5 @@
 <div id="logo">
-  <a href="#"><img src="/sites/all/themes/clim/images/logo.png"/></a>
+  <a href="html"><img src="/sites/all/themes/clim/images/logo.png"/></a>
 </div>
 <header id="main-menu">
   <nav id="nav">

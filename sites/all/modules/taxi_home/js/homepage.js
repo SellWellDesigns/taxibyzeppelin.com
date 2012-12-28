@@ -14,15 +14,16 @@
 			var self = this;
 
 			self.$nav         = $("#nav a");
+			self.$logo				= $("#logo a");
 			self.$bgPhoto     = $("div.slide");
 			self.currentSlide = 0;
 			self.totalSlides  = self.$bgPhoto.length;
 
 			// Attach click handlers
 			self.$nav.on("click", self.scrollTo);
+			self.$logo.on("click", self.scrollTop);
 
 			self.bgSlideshow();
-			self.googleMap();
 			self.setActiveSection();
 
 		},
@@ -137,6 +138,27 @@
 
 		},
 
+			//
+		// Ohhhhhh baby that is some smooth scrolling
+		//
+		scrollTop: function(event){
+
+			var self = taxi;
+
+			// Init
+			var $link = $(this);
+
+			// Scroll to href of clicked link
+			$("html, body").stop().animate({
+
+        scrollTop: $($link.attr("href")).offset().top
+
+      }, 1500,'easeInOutExpo');
+
+			event.preventDefault();
+
+		},
+
 
 		//
 		// Just tell me where i am dammit!
@@ -200,6 +222,7 @@
 
 			setTimeout(function() {
 
+				$html.css("overflow","auto");
 				$loader.fadeOut();
 
 			}, 2000)

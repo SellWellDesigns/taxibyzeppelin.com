@@ -12,6 +12,12 @@
 	font-weight: normal
 	font-style: normal
 
+hr
+	width: 40px
+	margin: 0 auto 40px auto
+	height: 3px
+	background: black
+
 .fixed
 	position: fixed
 
@@ -66,11 +72,11 @@
 		background: url(../images/loading_small.gif) no-repeat center center
 
 .tri
-	width: 120%
+	width: 150%
 	background: $grayLight
 	position: relative
 	z-index: 300
-	left: -5%
+	left: -10%
 
 
 //  Drupal Overrides
@@ -142,7 +148,7 @@
 #main-menu 
 	position: fixed
 	top: 100px
-	right: 20px
+	right: 25px
 	z-index: 600
 	ul
 		list-style: none
@@ -157,6 +163,8 @@
 				text-transform: uppercase
 				&.active
 					border-bottom: 2px solid
+				&:hover
+					text-decoration: none
 
 article.content-section
 	padding: 100px 0
@@ -166,7 +174,6 @@ article.content-section
 	z-index: 400
 
 .body-text
-	font-family: $monospaceFontFamily
 	width: 80%
 	margin: 0 auto
 	max-width: 600px
@@ -281,14 +288,17 @@ article.content-section
 		top: 200px
 
 #social-btns
+	a:hover
+		text-decoration: none
+		.social[data-icon]:before
+			color: $pink
 	.social[data-icon]:before
 		font-family: 'EntypoSocial'
-		font-size: 70px
+		font-size: 40px
 		font-weight: normal
 		content: attr(data-icon)
 		color: black
-		&:hover
-			color: $yellow
+		margin: 0 10px
 
 .page-user
 	.login-wrap

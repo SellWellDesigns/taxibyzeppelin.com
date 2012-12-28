@@ -523,6 +523,25 @@
 		width: 28px
 
 @media (max-width: 767px)
+	#logo
+		left: 10px
+		top: 20px
+	#main-menu
+		top: 20px
+		right: 10px
+	#about .tri-top,
+	#companies .tri-top,
+	#contact .tri-top,
+	#map .tri-top
+		height: 200px
+		bottom: -100px
+	#about .tri-bottom,
+	#companies .tri-bottom,
+	#contact .tri-bottom,
+		height: 200px
+		top: -100px
+	article.content-section
+		padding: 20px 0
 	.container-fluid
 		padding: 0
 	.dl-horizontal
@@ -580,39 +599,14 @@
 			top: auto
 
 @media (max-width: 480px)
-	.nav-collapse
-		-webkit-transform: translate3d(0, 0, 0)
-	.page-header h1 small
-		display: block
-		line-height: 20px
-	input
-		&[type="checkbox"], &[type="radio"]
-			border: 1px solid #ccc
-	.form-horizontal
-		.control-label
-			float: none
-			width: auto
-			padding-top: 0
-			text-align: left
-		.controls
-			margin-left: 0
-		.control-list
-			padding-top: 0
-		.form-actions
-			padding-right: 10px
-			padding-left: 10px
-	.modal
-		top: 10px
-		right: 10px
-		left: 10px
-	.modal-header .close
-		padding: 10px
-		margin: -10px
-	.carousel-caption
-		position: static
+	.slide-window
+		height: 250px
 
-@media (max-width: 979px)
-	body
-		padding-top: 0
+@media only screen and (orientation: portrait) and (device-width: 320px), (device-width: 768px)
+	.slide
+		-webkit-background-size: auto 100%
 	
-@media (min-width: 980px)
+@media only screen and (orientation: landscape) and (device-width: 320px), (device-width: 768px)
+	.slide
+		-webkit-background-size: 100% auto
+
