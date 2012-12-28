@@ -77,9 +77,10 @@ function taxi_home_page_build(){
     // Get Data
     $company = $value->title;
     $company_url = $value->link;
-    $building = $value->building;
+    $building = str_replace('_', ' ', $value->building);
     $options = array( 'html' => TRUE );
     $link = l( "<p>$company</p>", $company_url, $options );
+
 
     // Load markup into appropriate array slot
     if ( isset( $all_companies[$building] ) ) {
@@ -211,7 +212,7 @@ function taxi_home_page_build(){
     </section>
   ";
 
-  // Putting everything together :)
+  // Putting everything together :{) (with a moustach)
 	$html = "
 		$bg_slider
 		<div id=\"main-content\">

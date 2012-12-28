@@ -1641,7 +1641,7 @@ article.content-section { padding: 100px 0; margin-bottom: 0; background: #edede
 #companies .tri-bottom { transform: rotate(-5deg); -ms-transform: rotate(-5deg); -moz-transform: rotate(-5deg); -webkit-transform: rotate(-5deg); -o-transform: rotate(-5deg); height: 400px; top: -200px; }
 #companies .content-section { overflow: hidden; }
 #companies .content-section .buildings-wrapper { width: 80%; min-width: 550px; padding-left: 15%; }
-#companies .content-section .buildings-wrapper .building { width: 20%; float: left; }
+#companies .content-section .buildings-wrapper .building { width: 16.667%; float: left; }
 #companies .content-section .buildings-wrapper .building h4 { float: left; }
 #companies .content-section .buildings-wrapper .building .companies-list .company-link a { float: left; clear: both; color: black; }
 #companies .content-section .buildings-wrapper .building .companies-list .company-link a p { text-align: left; padding-right: 6px; }
