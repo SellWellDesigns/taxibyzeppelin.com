@@ -104,10 +104,11 @@ function taxi_items_schema() {
 					'#type' => 'select',
 					'#title' => 'Building',
 					'#options' => array(
-						'taxi' => 'Taxi',
+						'taxi_1' => 'Taxi 1',
 						'taxi_2' => 'Taxi 2',
 						'freight' => 'Freight',
 						'diesel' => 'Diesel',
+						'bio_diesel' => 'Bio Diesel',
 						'drive' => 'Drive',
 					),
 				),
