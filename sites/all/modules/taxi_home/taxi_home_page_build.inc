@@ -27,6 +27,7 @@ function taxi_home_page_build(){
 	$js_path = "https://maps.google.com/maps/api/js?sensor=false";
 	drupal_add_js($js_path, array('scope' => 'footer', 'weight' => 3));
 
+
   // Build query for slider images
   $slider_query_string = "
   	SELECT c.fid, c.weight, c.parent_type, f.fid, f.uri
@@ -111,8 +112,13 @@ function taxi_home_page_build(){
   foreach( $all_companies as $building => $companies ) {
     
     $companies_markup .= "
-      <div class=\"building\">
-        <h4>$building</h4>
+      <div class=\"building \">
+        <div class=\"accordionButton\">
+          <h4>$building</h4>
+          <div class=\"plus-minus\">
+            <h5 class=\"open\"> + </h5>
+          </div>
+        </div>
         <div class=\"companies-list\">$companies</div>
       </div>
     ";
@@ -170,7 +176,7 @@ function taxi_home_page_build(){
   		<article class=\"content-section\">
   			<h1>Companies</h1>
         <hr></hr>
-        <div class=\"buildings-wrapper\">
+        <div id=\"accordion\" class=\"buildings-wrapper\">
           $companies_markup
         </div>
   		</article>
@@ -229,7 +235,7 @@ function taxi_home_page_build(){
 	$html = "
 		$bg_slider
 		<div id=\"main-content\">
-			<section id=\"start-section\"></section>
+			<section id=\"start-section\"> </section>
 			$about
 			$window
 			$company_section

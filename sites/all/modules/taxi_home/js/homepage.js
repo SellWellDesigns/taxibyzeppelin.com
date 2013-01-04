@@ -25,6 +25,44 @@
 
 			self.bgSlideshow();
 			self.setActiveSection();
+			self.accordion();
+
+		},
+
+		//
+		// Playin' polka with code
+		//
+		accordion: function(){
+
+			// Define variables
+			var $accordion  = $('div.accordionButton');
+
+			// Accordion butotn action-jackson
+			$accordion.click(function(event){
+
+				var $this = $(this);
+
+				if ( !$this.hasClass('.active') ) {
+
+					$this.addClass('.active');
+					$this.next().slideDown('normal');
+					$this.find('.plus-minus h5').text('-');
+
+				} else {
+
+					$this.removeClass('.active');
+					$this.next().slideUp('normal');
+					$this.find('.plus-minus h5').text('+');
+
+				}
+		
+			});
+
+
+			// Hide all divs on page load
+			$("div.companies-list").hide();	
+
+    		
 
 		},
 

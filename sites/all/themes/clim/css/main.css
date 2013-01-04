@@ -1596,7 +1596,7 @@ hr { width: 40px; margin: 0 auto 40px auto; height: 3px; background: black; }
 .loading-gif-element .medium { height: 20px; width: 20px; background: url(../images/loading_medium.gif) no-repeat center center; }
 .loading-gif-element .small { height: 10px; width: 10px; background: url(../images/loading_small.gif) no-repeat center center; }
 
-.tri { width: 150%; background: #ededed; position: relative; z-index: 300; left: -10%; }
+.tri { width: 132%; background: #ededed; position: relative; z-index: 300; left: -10%; }
 
 .page-user .form-item .description, .page-user label { display: none; }
 .page-user .container { margin-top: 20%; }
@@ -1643,10 +1643,14 @@ article.content-section { padding: 100px 0; margin-bottom: 0; background: #edede
 #companies .tri-bottom { transform: rotate(-5deg); -ms-transform: rotate(-5deg); -moz-transform: rotate(-5deg); -webkit-transform: rotate(-5deg); -o-transform: rotate(-5deg); height: 400px; top: -200px; }
 #companies .content-section { overflow: hidden; }
 #companies .content-section .buildings-wrapper { width: 80%; min-width: 550px; padding-left: 12%; }
-#companies .content-section .buildings-wrapper .building { width: 16.66666%; float: left; }
-#companies .content-section .buildings-wrapper .building h4 { float: left; }
-#companies .content-section .buildings-wrapper .building .companies-list .company-link a { float: left; clear: both; color: black; }
-#companies .content-section .buildings-wrapper .building .companies-list .company-link a p { text-align: left; padding-right: 6px; font-size: 11px; line-height: 1em; }
+#companies .content-section .buildings-wrapper .building { border-bottom: 1px solid black; }
+#companies .content-section .buildings-wrapper .building .accordionButton { padding-bottom: 10px; }
+#companies .content-section .buildings-wrapper .building .accordionButton h4 { cursor: pointer; float: left; }
+#companies .content-section .buildings-wrapper .building .accordionButton h5 { text-align: right; font-size: 21px; }
+#companies .content-section .buildings-wrapper .building .close { display: none; }
+#companies .content-section .buildings-wrapper .building .companies-list { display: none; }
+#companies .content-section .buildings-wrapper .building .companies-list .company-link a { clear: both; color: black; }
+#companies .content-section .buildings-wrapper .building .companies-list .company-link a p { padding-right: 6px; font-size: 13px; line-height: 1em; }
 
 #contact { overflow-x: hidden; }
 #contact .tri-top { transform: rotate(8deg); -ms-transform: rotate(8deg); -moz-transform: rotate(8deg); -webkit-transform: rotate(8deg); -o-transform: rotate(8deg); height: 400px; bottom: -200px; }
@@ -1659,6 +1663,7 @@ article.content-section { padding: 100px 0; margin-bottom: 0; background: #edede
 #map .tri-top { transform: rotate(-5deg); -ms-transform: rotate(-5deg); -moz-transform: rotate(-5deg); -webkit-transform: rotate(-5deg); -o-transform: rotate(-5deg); height: 400px; top: 200px; }
 
 #social-btns a:hover { text-decoration: none; }
+#social-btns a:hover .social[data-icon]:before { color: #cd1076; }
 #social-btns .social[data-icon]:before { font-family: "EntypoSocial"; font-size: 40px; font-weight: normal; content: attr(data-icon); color: black; margin: 0 10px; curson: pointer; }
 #social-btns .social[data-icon]:before:hover { color: #cd1076; }
 

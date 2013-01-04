@@ -72,7 +72,7 @@ hr
 		background: url(../images/loading_small.gif) no-repeat center center
 
 .tri
-	width: 150%
+	width: 132%
 	background: $grayLight
 	position: relative
 	z-index: 300
@@ -195,6 +195,7 @@ article.content-section
 	width: 100%
 	display: block
 
+
 #about
 	margin-top: -250px
 	overflow-x: hidden
@@ -240,20 +241,26 @@ article.content-section
 			min-width: 550px
 			padding-left: 12%
 			.building
-				width: 16.66666%
-				float: left
-				h4
-					float: left
+				border-bottom: 1px solid black
+				.accordionButton
+					padding-bottom: 10px
+					h4
+						cursor: pointer
+						float: left
+					h5
+						text-align: right
+						font-size: 21px
+				.close
+					display: none
 				.companies-list
+					display: none
 					.company-link
 						a
-							float: left
 							clear: both
 							color: black
 							p
-								text-align: left
 								padding-right: 6px
-								font-size: 11px
+								font-size: 13px
 								line-height: 1em
 
 #contact
@@ -296,6 +303,8 @@ article.content-section
 #social-btns
 	a:hover
 		text-decoration: none
+		.social[data-icon]:before
+			color: $pink 
 	.social[data-icon]:before
 		font-family: 'EntypoSocial'
 		font-size: 40px
