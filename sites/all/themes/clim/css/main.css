@@ -1642,11 +1642,11 @@ article.content-section { padding: 100px 0; margin-bottom: 0; background: #edede
 #companies .tri-top { transform: rotate(5deg); -ms-transform: rotate(5deg); -moz-transform: rotate(5deg); -webkit-transform: rotate(5deg); -o-transform: rotate(5deg); height: 400px; bottom: -200px; }
 #companies .tri-bottom { transform: rotate(-5deg); -ms-transform: rotate(-5deg); -moz-transform: rotate(-5deg); -webkit-transform: rotate(-5deg); -o-transform: rotate(-5deg); height: 400px; top: -200px; }
 #companies .content-section { overflow: hidden; }
-#companies .content-section .buildings-wrapper { width: 80%; min-width: 550px; padding-left: 15%; }
+#companies .content-section .buildings-wrapper { width: 80%; min-width: 550px; padding-left: 12%; }
 #companies .content-section .buildings-wrapper .building { width: 16.66666%; float: left; }
 #companies .content-section .buildings-wrapper .building h4 { float: left; }
 #companies .content-section .buildings-wrapper .building .companies-list .company-link a { float: left; clear: both; color: black; }
-#companies .content-section .buildings-wrapper .building .companies-list .company-link a p { text-align: left; padding-right: 6px; }
+#companies .content-section .buildings-wrapper .building .companies-list .company-link a p { text-align: left; padding-right: 6px; font-size: 11px; line-height: 1em; }
 
 #contact { overflow-x: hidden; }
 #contact .tri-top { transform: rotate(8deg); -ms-transform: rotate(8deg); -moz-transform: rotate(8deg); -webkit-transform: rotate(8deg); -o-transform: rotate(8deg); height: 400px; bottom: -200px; }
@@ -1659,8 +1659,8 @@ article.content-section { padding: 100px 0; margin-bottom: 0; background: #edede
 #map .tri-top { transform: rotate(-5deg); -ms-transform: rotate(-5deg); -moz-transform: rotate(-5deg); -webkit-transform: rotate(-5deg); -o-transform: rotate(-5deg); height: 400px; top: 200px; }
 
 #social-btns a:hover { text-decoration: none; }
-#social-btns a:hover .social[data-icon]:before { color: #cd1076; }
-#social-btns .social[data-icon]:before { font-family: "EntypoSocial"; font-size: 40px; font-weight: normal; content: attr(data-icon); color: black; margin: 0 10px; }
+#social-btns .social[data-icon]:before { font-family: "EntypoSocial"; font-size: 40px; font-weight: normal; content: attr(data-icon); color: black; margin: 0 10px; curson: pointer; }
+#social-btns .social[data-icon]:before:hover { color: #cd1076; }
 
 .page-user .login-wrap { width: 300px; margin: 100px auto 0 auto; }
 .page-user .login-wrap input[type="text"], .page-user .login-wrap input[type="password"] { width: 88%; }
@@ -1883,6 +1883,7 @@ article.content-section { padding: 100px 0; margin-bottom: 0; background: #edede
   .controls-row [class*="span"] + [class*="span"] { margin-left: 0; }
   .modal { position: fixed; top: 20px; right: 20px; left: 20px; width: auto; margin: 0; }
   .modal.fade.in { top: auto; } }
-@media (max-width: 480px) { .slide-window { height: 250px; } }
+@media (max-width: 480px) { .slide-window { height: 250px; }
+  #logo { width: 62px; } }
 @media only screen and (min-device-width: 320px) and (max-device-width: 768px) and (orientation: portrait) { .slide { -webkit-background-size: auto 100%; } }
 @media only screen and (min-device-width: 320px) and (max-device-width: 768px) and (orientation: landscape) { .slide { -webkit-background-size: 100% auto; } }

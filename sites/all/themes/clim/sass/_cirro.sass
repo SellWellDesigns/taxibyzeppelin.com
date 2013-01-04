@@ -238,7 +238,7 @@ article.content-section
 		.buildings-wrapper
 			width: 80%
 			min-width: 550px
-			padding-left: 15%
+			padding-left: 12%
 			.building
 				width: 16.66666%
 				float: left
@@ -253,6 +253,8 @@ article.content-section
 							p
 								text-align: left
 								padding-right: 6px
+								font-size: 11px
+								line-height: 1em
 
 #contact
 	overflow-x: hidden
@@ -294,8 +296,6 @@ article.content-section
 #social-btns
 	a:hover
 		text-decoration: none
-		.social[data-icon]:before
-			color: $pink
 	.social[data-icon]:before
 		font-family: 'EntypoSocial'
 		font-size: 40px
@@ -303,6 +303,9 @@ article.content-section
 		content: attr(data-icon)
 		color: black
 		margin: 0 10px
+		curson: pointer
+		&:hover
+			color: $pink
 
 .page-user
 	.login-wrap

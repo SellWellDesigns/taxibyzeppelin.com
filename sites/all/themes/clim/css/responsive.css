@@ -209,6 +209,7 @@
   .controls-row [class*="span"] + [class*="span"] { margin-left: 0; }
   .modal { position: fixed; top: 20px; right: 20px; left: 20px; width: auto; margin: 0; }
   .modal.fade.in { top: auto; } }
-@media (max-width: 480px) { .slide-window { height: 250px; } }
+@media (max-width: 480px) { .slide-window { height: 250px; }
+  #logo { width: 62px; } }
 @media only screen and (min-device-width: 320px) and (max-device-width: 768px) and (orientation: portrait) { .slide { -webkit-background-size: auto 100%; } }
 @media only screen and (min-device-width: 320px) and (max-device-width: 768px) and (orientation: landscape) { .slide { -webkit-background-size: 100% auto; } }
