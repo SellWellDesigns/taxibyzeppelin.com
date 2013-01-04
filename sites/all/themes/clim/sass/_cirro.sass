@@ -142,7 +142,7 @@ hr
 	position: fixed
 	top: 100px
 	left: 9%
-	width: 65px
+	width: 92px
 	z-index: 600
 
 #main-menu 
@@ -197,6 +197,7 @@ article.content-section
 
 #about
 	margin-top: -250px
+	overflow-x: hidden
 	.tri-top
 		transform: rotate(8deg)
 		-ms-transform: rotate(8deg)
@@ -215,6 +216,7 @@ article.content-section
 		top: -200px
 
 #companies
+	overflow-x: hidden
 	.tri-top
 		transform: rotate(5deg)
 		-ms-transform: rotate(5deg)
@@ -236,7 +238,7 @@ article.content-section
 		.buildings-wrapper
 			width: 80%
 			min-width: 550px
-			padding-left: 15%
+			padding-left: 12%
 			.building
 				width: 16.66666%
 				float: left
@@ -251,8 +253,11 @@ article.content-section
 							p
 								text-align: left
 								padding-right: 6px
+								font-size: 11px
+								line-height: 1em
 
 #contact
+	overflow-x: hidden
 	.tri-top
 		transform: rotate(8deg)
 		-ms-transform: rotate(8deg)
@@ -271,6 +276,7 @@ article.content-section
 		top: -200px
 
 #map
+	overflow-x: hidden
 	#map-info
 		margin-bottom: 100px
 		a
@@ -290,8 +296,6 @@ article.content-section
 #social-btns
 	a:hover
 		text-decoration: none
-		.social[data-icon]:before
-			color: $pink
 	.social[data-icon]:before
 		font-family: 'EntypoSocial'
 		font-size: 40px
@@ -299,6 +303,9 @@ article.content-section
 		content: attr(data-icon)
 		color: black
 		margin: 0 10px
+		curson: pointer
+		&:hover
+			color: $pink
 
 .page-user
 	.login-wrap

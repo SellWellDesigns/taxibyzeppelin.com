@@ -170,7 +170,7 @@
 					winHeight = $window.height(),
 					$nav      = $("#nav"),
 					$navItem  = $("#nav li a"),
-					i 				= 0;
+					i 		  = 0;
 
 			// Grab the position of all our sections
 			$(".section").each(function(){
