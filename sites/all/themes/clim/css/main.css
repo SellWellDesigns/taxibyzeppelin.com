@@ -1642,7 +1642,7 @@ article.content-section { padding: 100px 0; margin-bottom: 0; background: #edede
 #companies .tri-top { transform: rotate(5deg); -ms-transform: rotate(5deg); -moz-transform: rotate(5deg); -webkit-transform: rotate(5deg); -o-transform: rotate(5deg); height: 400px; bottom: -200px; }
 #companies .tri-bottom { transform: rotate(-5deg); -ms-transform: rotate(-5deg); -moz-transform: rotate(-5deg); -webkit-transform: rotate(-5deg); -o-transform: rotate(-5deg); height: 400px; top: -200px; }
 #companies .content-section { overflow: hidden; }
-#companies .content-section .buildings-wrapper { width: 80%; min-width: 550px; padding-left: 12%; }
+#companies .content-section .buildings-wrapper { width: 80%; max-width: 800px; }
 #companies .content-section .buildings-wrapper .building { border-bottom: 1px solid black; }
 #companies .content-section .buildings-wrapper .building .accordionButton { padding-bottom: 10px; }
 #companies .content-section .buildings-wrapper .building .accordionButton h4 { cursor: pointer; float: left; }
@@ -1662,10 +1662,9 @@ article.content-section { padding: 100px 0; margin-bottom: 0; background: #edede
 #map #map_canvas { min-height: 700px; margin: 0px auto; }
 #map .tri-top { transform: rotate(-5deg); -ms-transform: rotate(-5deg); -moz-transform: rotate(-5deg); -webkit-transform: rotate(-5deg); -o-transform: rotate(-5deg); height: 400px; top: 200px; }
 
+#social-btns .social[data-icon]:before { font-family: "EntypoSocial"; font-size: 40px; font-weight: normal; content: attr(data-icon); color: black; margin: 0 10px; }
 #social-btns a:hover { text-decoration: none; }
 #social-btns a:hover .social[data-icon]:before { color: #cd1076; }
-#social-btns .social[data-icon]:before { font-family: "EntypoSocial"; font-size: 40px; font-weight: normal; content: attr(data-icon); color: black; margin: 0 10px; curson: pointer; }
-#social-btns .social[data-icon]:before:hover { color: #cd1076; }
 
 .page-user .login-wrap { width: 300px; margin: 100px auto 0 auto; }
 .page-user .login-wrap input[type="text"], .page-user .login-wrap input[type="password"] { width: 88%; }

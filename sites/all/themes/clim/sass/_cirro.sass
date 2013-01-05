@@ -238,8 +238,7 @@ article.content-section
 		overflow: hidden
 		.buildings-wrapper
 			width: 80%
-			min-width: 550px
-			padding-left: 12%
+			max-width: 800px
 			.building
 				border-bottom: 1px solid black
 				.accordionButton
@@ -301,10 +300,6 @@ article.content-section
 		top: 200px
 
 #social-btns
-	a:hover
-		text-decoration: none
-		.social[data-icon]:before
-			color: $pink 
 	.social[data-icon]:before
 		font-family: 'EntypoSocial'
 		font-size: 40px
@@ -312,9 +307,12 @@ article.content-section
 		content: attr(data-icon)
 		color: black
 		margin: 0 10px
-		curson: pointer
-		&:hover
-			color: $pink
+	a:hover
+		text-decoration: none
+		.social[data-icon]:before
+			color: $pink 
+	
+		
 
 .page-user
 	.login-wrap

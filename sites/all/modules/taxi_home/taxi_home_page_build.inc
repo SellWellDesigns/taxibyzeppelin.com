@@ -176,9 +176,11 @@ function taxi_home_page_build(){
   		<article class=\"content-section\">
   			<h1>Companies</h1>
         <hr></hr>
+        <center> 
         <div id=\"accordion\" class=\"buildings-wrapper\">
-          $companies_markup
+          $companies_markup 
         </div>
+        </center>
   		</article>
       <div class=\"tri tri-bottom\"></div>
   	</section>
