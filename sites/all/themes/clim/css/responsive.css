@@ -191,6 +191,8 @@
   input.span1, textarea.span1, .uneditable-input.span1 { width: 28px; } }
 @media (max-width: 767px) { #logo { left: 10px; top: 20px; }
   #main-menu { top: 20px; right: 10px; }
+  #social { right: 10px; }
+  #social [data-icon]:before { font-size: 23px; }
   #about .tri-top, #companies .tri-top, #contact .tri-top, #map .tri-top { height: 200px; bottom: -100px; }
   #about .tri-bottom, #companies .tri-bottom, #contact .tri-bottom { height: 200px; top: -100px; }
   article.content-section { padding: 20px 0; }
@@ -210,6 +212,11 @@
   .modal { position: fixed; top: 20px; right: 20px; left: 20px; width: auto; margin: 0; }
   .modal.fade.in { top: auto; } }
 @media (max-width: 480px) { .slide-window { height: 250px; }
+  #main-menu ul li { margin-bottom: 3px; }
+  #main-menu ul li a { font-size: 9px; }
+  #social { right: 4px; }
+  #social .social-btn { float: none; }
+  #social .social-btn [data-icon]:before { font-size: 22px; }
   #logo { width: 62px; } }
 @media only screen and (min-device-width: 320px) and (max-device-width: 768px) and (orientation: portrait) { .slide { -webkit-background-size: auto 100%; } }
 @media only screen and (min-device-width: 320px) and (max-device-width: 768px) and (orientation: landscape) { .slide { -webkit-background-size: 100% auto; } }

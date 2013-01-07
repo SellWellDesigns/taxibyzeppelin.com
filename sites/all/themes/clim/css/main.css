@@ -1650,9 +1650,9 @@ article.content-section { padding: 100px 0; margin-bottom: 0; background: #edede
 #companies .content-section .buildings-wrapper .building .accordionButton h4 { cursor: pointer; float: left; }
 #companies .content-section .buildings-wrapper .building .accordionButton h5 { text-align: right; font-size: 21px; }
 #companies .content-section .buildings-wrapper .building .close { display: none; }
-#companies .content-section .buildings-wrapper .building .companies-list { display: none; }
+#companies .content-section .buildings-wrapper .building .companies-list { display: none; text-align: left; -moz-column-count: 3; -webkit-column-count: 3; column-count: 3; -moz-column-gap: 0px; -webkit-column-gap: 0px; column-gap: 0px; }
 #companies .content-section .buildings-wrapper .building .companies-list .company-link a { clear: both; color: black; }
-#companies .content-section .buildings-wrapper .building .companies-list .company-link a p { padding-right: 6px; font-size: 13px; line-height: 1em; }
+#companies .content-section .buildings-wrapper .building .companies-list .company-link a p { font-size: 13px; line-height: 1em; }
 
 #contact { overflow-x: hidden; }
 #contact .tri-top { transform: rotate(8deg); -ms-transform: rotate(8deg); -moz-transform: rotate(8deg); -webkit-transform: rotate(8deg); -o-transform: rotate(8deg); height: 400px; bottom: -200px; }
@@ -1665,10 +1665,13 @@ article.content-section { padding: 100px 0; margin-bottom: 0; background: #edede
 #map .tri-top { transform: rotate(-5deg); -ms-transform: rotate(-5deg); -moz-transform: rotate(-5deg); -webkit-transform: rotate(-5deg); -o-transform: rotate(-5deg); height: 400px; top: 200px; }
 
 #social { position: fixed; bottom: 0; right: 25px; bottom: 25px; z-index: 1000; }
-#social #social-btns a { text-decoration: none; margin: 0 10px; color: black; }
-#social #social-btns a:hover { cursor: pointer; color: #cd1076; }
-#social #social-btns [data-icon]:before { font-family: "EntypoSocial"; font-size: 30px; font-weight: normal; content: attr(data-icon); }
-#social #social-btns [data-icon]:before:hover { color: #cd1076; }
+#social .social-btn { float: left; }
+#social .social-btn a { text-decoration: none; margin: 0 10px; color: black; }
+#social .social-btn a:hover { cursor: pointer; color: #cd1076; }
+#social .social-btn [data-icon]:before { font-family: "EntypoSocial"; font-size: 30px; font-weight: normal; content: attr(data-icon); }
+#social .social-btn [data-icon]:before:hover { color: #cd1076; }
+
+#addresses h5 { margin-bottom: 0; }
 
 .page-user .login-wrap { width: 300px; margin: 100px auto 0 auto; }
 .page-user .login-wrap input[type="text"], .page-user .login-wrap input[type="password"] { width: 88%; }
@@ -1873,6 +1876,8 @@ article.content-section { padding: 100px 0; margin-bottom: 0; background: #edede
   input.span1, textarea.span1, .uneditable-input.span1 { width: 28px; } }
 @media (max-width: 767px) { #logo { left: 10px; top: 20px; }
   #main-menu { top: 20px; right: 10px; }
+  #social { right: 10px; }
+  #social [data-icon]:before { font-size: 23px; }
   #about .tri-top, #companies .tri-top, #contact .tri-top, #map .tri-top { height: 200px; bottom: -100px; }
   #about .tri-bottom, #companies .tri-bottom, #contact .tri-bottom { height: 200px; top: -100px; }
   article.content-section { padding: 20px 0; }
@@ -1892,6 +1897,11 @@ article.content-section { padding: 100px 0; margin-bottom: 0; background: #edede
   .modal { position: fixed; top: 20px; right: 20px; left: 20px; width: auto; margin: 0; }
   .modal.fade.in { top: auto; } }
 @media (max-width: 480px) { .slide-window { height: 250px; }
+  #main-menu ul li { margin-bottom: 3px; }
+  #main-menu ul li a { font-size: 9px; }
+  #social { right: 4px; }
+  #social .social-btn { float: none; }
+  #social .social-btn [data-icon]:before { font-size: 22px; }
   #logo { width: 62px; } }
 @media only screen and (min-device-width: 320px) and (max-device-width: 768px) and (orientation: portrait) { .slide { -webkit-background-size: auto 100%; } }
 @media only screen and (min-device-width: 320px) and (max-device-width: 768px) and (orientation: landscape) { .slide { -webkit-background-size: 100% auto; } }

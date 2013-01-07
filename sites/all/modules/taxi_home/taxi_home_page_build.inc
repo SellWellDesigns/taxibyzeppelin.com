@@ -215,6 +215,16 @@ function taxi_home_page_build(){
             <img src=\"$map_img\" />
           </div>
         </a>
+        <div id=\"addresses\" class=\"row\">
+          <div class=\"span2\">
+              <h5> TAXI </h5>
+              <p> 3455 Ringsby Ct </p>
+          </div>
+          <div class=\"span2\">
+            <h5> TAXI II </h5>
+            <p> 3457 Ringsby Ct </p>
+          </div>
+        </div>
       </article>
     </section>
   ";

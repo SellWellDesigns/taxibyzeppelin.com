@@ -260,12 +260,18 @@ article.content-section
 					display: none
 				.companies-list
 					display: none
+					text-align: left
+					-moz-column-count: 3
+					-webkit-column-count: 3
+					column-count: 3
+					-moz-column-gap: 0px
+					-webkit-column-gap: 0px
+					column-gap: 0px
 					.company-link
 						a
 							clear: both
 							color: black
 							p
-								padding-right: 6px
 								font-size: 13px
 								line-height: 1em
 
@@ -312,8 +318,9 @@ article.content-section
 	right: 25px
 	bottom: 25px
 	z-index: 1000
-	#social-btns
-		a
+	.social-btn
+		float: left
+		a		
 			text-decoration: none
 			margin: 0 10px
 			color: black
@@ -326,12 +333,11 @@ article.content-section
 			font-weight: normal
 			content: attr(data-icon)
 			&:hover
-				color: $pink
-			
-
-			
+				color: $pink	
 	
-		
+#addresses
+	h5
+		margin-bottom: 0		
 
 .page-user
 	.login-wrap
