@@ -313,17 +313,23 @@ article.content-section
 	bottom: 25px
 	z-index: 1000
 	#social-btns
-		.social[data-icon]:before
+		a
+			text-decoration: none
+			margin: 0 10px
+			color: black
+			&:hover
+				cursor: pointer
+				color: $pink
+		[data-icon]:before
 			font-family: 'EntypoSocial'
 			font-size: 30px
 			font-weight: normal
 			content: attr(data-icon)
-			color: black
-			margin: 0 10px
-		a:hover
-			text-decoration: none
-			.social[data-icon]:before
-				color: $pink 
+			&:hover
+				color: $pink
+			
+
+			
 	
 		
 

@@ -1665,9 +1665,10 @@ article.content-section { padding: 100px 0; margin-bottom: 0; background: #edede
 #map .tri-top { transform: rotate(-5deg); -ms-transform: rotate(-5deg); -moz-transform: rotate(-5deg); -webkit-transform: rotate(-5deg); -o-transform: rotate(-5deg); height: 400px; top: 200px; }
 
 #social { position: fixed; bottom: 0; right: 25px; bottom: 25px; z-index: 1000; }
-#social #social-btns .social[data-icon]:before { font-family: "EntypoSocial"; font-size: 30px; font-weight: normal; content: attr(data-icon); color: black; margin: 0 10px; }
-#social #social-btns a:hover { text-decoration: none; }
-#social #social-btns a:hover .social[data-icon]:before { color: #cd1076; }
+#social #social-btns a { text-decoration: none; margin: 0 10px; color: black; }
+#social #social-btns a:hover { cursor: pointer; color: #cd1076; }
+#social #social-btns [data-icon]:before { font-family: "EntypoSocial"; font-size: 30px; font-weight: normal; content: attr(data-icon); }
+#social #social-btns [data-icon]:before:hover { color: #cd1076; }
 
 .page-user .login-wrap { width: 300px; margin: 100px auto 0 auto; }
 .page-user .login-wrap input[type="text"], .page-user .login-wrap input[type="password"] { width: 88%; }

@@ -186,19 +186,6 @@ function taxi_home_page_build(){
   	</section>
   ";
 
-  $social = "
-    <div id=\"social-btns\">
-      <a href=\"###\">
-        <span class=\"social\" data-icon=\"&#62220;\"></span>
-      </a>
-      <a href=\"###\">
-        <span class=\"social\" data-icon=\"&#62217;\"></span>
-      </a>
-      <a href=\"###\">
-        <span class=\"social\" data-icon=\"&#62253;\"></span>
-      </a>
-    </div>
-  ";
 
   $contact = "
   	<section id=\"contact\" class=\"section text-center\">
