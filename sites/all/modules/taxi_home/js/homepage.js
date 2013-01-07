@@ -41,12 +41,21 @@
 			$accordion.click(function(event){
 
 				var $this = $(this);
+				var $siblings = $this.parent().siblings().find('div.accordionButton');
+			
 
+				$siblings.removeClass('.active');
+				$siblings.next().slideUp('normal');
+				$siblings.find('.plus-minus h5').text('+');
+
+			
 				if ( !$this.hasClass('.active') ) {
 
 					$this.addClass('.active');
 					$this.next().slideDown('normal');
 					$this.find('.plus-minus h5').text('-');
+
+				
 
 				} else {
 
@@ -55,7 +64,7 @@
 					$this.find('.plus-minus h5').text('+');
 
 				}
-		
+
 			});
 
 

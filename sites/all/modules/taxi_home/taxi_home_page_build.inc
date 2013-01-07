@@ -215,42 +215,6 @@ function taxi_home_page_build(){
             <img src=\"$map_img\" />
           </div>
         </a>
- <center>       
-        <div id=\"addresses\">
-        
-          <div class=\"address\">
-              <h5> Bio Diesel </h5>
-              <p> 3455 Ringsby Ct </p>
-          </div>
-
-           <div class=\"address\">
-              <h5> Diesel </h5>
-              <p> 3455 Ringsby Ct </p>
-          </div> 
-
-           <div class=\"address\">
-              <h5> Drive </h5>
-              <p> 3455 Ringsby Ct </p>
-          </div> 
-
-           <div class=\"address\">
-              <h5> Freight </h5>
-              <p> 3455 Ringsby Ct </p>
-          </div>
-
-          <div class=\"address\">
-              <h5> TAXI </h5>
-              <p> 3455 Ringsby Ct </p>
-          </div>
-
-          <div class=\"address\">
-            <h5> TAXI II </h5>
-            <p> 3457 Ringsby Ct </p>
-          </div>
-    
-         
-        </div>
-</center>
       </article>
     </section>
   ";
