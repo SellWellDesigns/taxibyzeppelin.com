@@ -208,7 +208,6 @@ function taxi_home_page_build(){
         <hr></hr>
         $address
         $leasing_info
-        $social
       </article>
       <div class=\"tri tri-bottom\"></div>
 		</section> 

@@ -306,18 +306,24 @@ article.content-section
 		height: 400px
 		top: 200px
 
-#social-btns
-	.social[data-icon]:before
-		font-family: 'EntypoSocial'
-		font-size: 40px
-		font-weight: normal
-		content: attr(data-icon)
-		color: black
-		margin: 0 10px
-	a:hover
-		text-decoration: none
+#social
+	position: fixed
+	bottom: 0
+	right: 25px
+	bottom: 25px
+	z-index: 1000
+	#social-btns
 		.social[data-icon]:before
-			color: $pink 
+			font-family: 'EntypoSocial'
+			font-size: 30px
+			font-weight: normal
+			content: attr(data-icon)
+			color: black
+			margin: 0 10px
+		a:hover
+			text-decoration: none
+			.social[data-icon]:before
+				color: $pink 
 	
 		
 

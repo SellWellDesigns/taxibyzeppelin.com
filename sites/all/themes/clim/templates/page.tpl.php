@@ -11,5 +11,7 @@
   <?php print $messages; ?>
 	<?php print render($page['content']) ?>
 </div>
-
+<div id="social">
+	<?php include 'social.inc'; ?>
+</div>
 <div id="loader"></div>
