@@ -206,9 +206,7 @@ function taxi_home_page_build(){
       <article class=\"content-section\">
         <div id=\"map-info\">
           <h1>MAP</h1>
-            <a href=\"http://itunes.com/apps/appname\" class=\"btn\">
-              Download the App
-            </a>
+          <hr></hr>
         </div>
         <a href=\"https://maps.google.com/maps?q=3457+ringsby+ct&oe=utf-8&client=firefox-a&channel=np&hnear=3457+Ringsby+Ct,+Denver,+Colorado+80216&gl=us&t=v&z=16\">
           <div id=\"map-wrap\">
@@ -232,8 +230,7 @@ function taxi_home_page_build(){
 			$window
 			$map
 		</div>
-    <div id=\"phone-popup\">
-    </div>
+ 
 	";
 	
 

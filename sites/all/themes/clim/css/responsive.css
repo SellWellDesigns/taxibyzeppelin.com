@@ -223,7 +223,10 @@
   h3 { font-size: 19px; }
   hr { margin: 0 auto 22px auto; }
   article.content-section { margin-left: -20px; }
-  .body-text { width: 74%; } }
+  .body-text { width: 74%; }
+  #map img { width: 86%; }
+  #map .tri-top { top: 175px; }
+  #map #map-info { margin-bottom: 42px; } }
 @media (max-width: 480px) and (orientation: landscape) { #social { bottom: 1px; }
   #main-menu ul li { margin-bottom: 0px; }
   article.content-section { margin-left: -39px; }
