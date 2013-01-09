@@ -34,6 +34,8 @@
 		//
 		accordion: function(){
 
+			var self = this;
+
 			// Define variables
 			var $accordion  = $('div.accordionButton');
 
@@ -42,25 +44,24 @@
 
 				var $this = $(this);
 				var $siblings = $this.parent().siblings().find('div.accordionButton');
-			
-
-				$siblings.removeClass('.active');
-				$siblings.next().slideUp('normal');
-				$siblings.find('.plus-minus h5').text('+');
-
+				self.siblings = $siblings;
+				self.content = $siblings.next();
 			
 				if ( !$this.hasClass('.active') ) {
 
+					$siblings.removeClass('.active');
+					$siblings.next().slideUp('fast');
+					$siblings.find('.plus-minus h5').text('+');
+
 					$this.addClass('.active');
-					$this.next().slideDown('normal');
+					$this.next().slideDown('fast');
 					$this.find('.plus-minus h5').text('-');
 
-				
 
 				} else {
 
 					$this.removeClass('.active');
-					$this.next().slideUp('normal');
+					$this.next().slideUp('fast');
 					$this.find('.plus-minus h5').text('+');
 
 				}
@@ -275,6 +276,7 @@
 			}, 2000)
 
 			taxi.init();
+			window.taxi = taxi;
 
 		})
 
