@@ -76,7 +76,7 @@ function taxi_home_page_build(){
 
   // Loop through compant items to build list
   foreach ( $company_items as $value ) {
-    
+
     // Init
     $company = '';
     $company_url = '';
@@ -98,6 +98,7 @@ function taxi_home_page_build(){
         <div class=\"company-link\">$link</div>
       ";
 
+
     } else {
       
       $all_companies[$building] = "
@@ -110,7 +111,7 @@ function taxi_home_page_build(){
 
   // Build companies markup
   foreach( $all_companies as $building => $companies ) {
-    
+
     $companies_markup .= "
       <div class=\"building \">
         <div class=\"accordionButton\">

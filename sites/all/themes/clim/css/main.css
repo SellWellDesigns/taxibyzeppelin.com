@@ -1646,11 +1646,12 @@ article.content-section { padding: 100px 0; margin-bottom: 0; background: #edede
 #companies .content-section { overflow: hidden; }
 #companies .content-section .buildings-wrapper { width: 80%; max-width: 800px; }
 #companies .content-section .buildings-wrapper .building { border-bottom: 1px solid black; }
-#companies .content-section .buildings-wrapper .building .accordionButton { padding-bottom: 10px; }
+#companies .content-section .buildings-wrapper .building .accordionButton { clear: both; padding-bottom: 10px; }
 #companies .content-section .buildings-wrapper .building .accordionButton h4 { cursor: pointer; float: left; }
 #companies .content-section .buildings-wrapper .building .accordionButton h5 { text-align: right; font-size: 21px; }
 #companies .content-section .buildings-wrapper .building .close { display: none; }
-#companies .content-section .buildings-wrapper .building .companies-list { display: none; text-align: left; -moz-column-count: 3; -webkit-column-count: 3; column-count: 3; -moz-column-gap: 0px; -webkit-column-gap: 0px; column-gap: 0px; }
+#companies .content-section .buildings-wrapper .building .companies-list { display: none; text-align: left; padding: 10px 0; overflow: hidden; }
+#companies .content-section .buildings-wrapper .building .companies-list .company-link { float: left; width: 250px; }
 #companies .content-section .buildings-wrapper .building .companies-list .company-link a { clear: both; color: black; }
 #companies .content-section .buildings-wrapper .building .companies-list .company-link a p { font-size: 13px; line-height: 1em; }
 
