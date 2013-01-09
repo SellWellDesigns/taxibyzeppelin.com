@@ -1645,14 +1645,14 @@ article.content-section { padding: 100px 0; margin-bottom: 0; background: #edede
 #companies .tri-bottom { transform: rotate(-5deg); -ms-transform: rotate(-5deg); -moz-transform: rotate(-5deg); -webkit-transform: rotate(-5deg); -o-transform: rotate(-5deg); height: 400px; top: -200px; }
 #companies .content-section { overflow: hidden; height: auto; }
 #companies .content-section .buildings-wrapper { width: 80%; max-width: 800px; height: auto; overflow: hidden; }
-#companies .content-section .buildings-wrapper .building { border-bottom: 1px solid black; overflow: hidden; height: auto; }
-#companies .content-section .buildings-wrapper .building .accordionButton { overflow: hidden; clear: both; padding-bottom: 10px; }
+#companies .content-section .buildings-wrapper .building { border-bottom: 1px solid black; overflow: hidden; height: auto; width: 100%; min-width: 100%; }
+#companies .content-section .buildings-wrapper .building .accordionButton { overflow: hidden; clear: both; padding-bottom: 10px; height: 40px; }
 #companies .content-section .buildings-wrapper .building .accordionButton h4 { cursor: pointer; float: left; }
 #companies .content-section .buildings-wrapper .building .accordionButton h5 { text-align: right; font-size: 21px; }
-#companies .content-section .buildings-wrapper .building .close { display: none; }
-#companies .content-section .buildings-wrapper .building .companies-list { display: none; text-align: left; padding: 10px 0; overflow: hidden; height: auto; }
+#companies .content-section .buildings-wrapper .building .accordionButton .plus-minus { overflow: hidden; height: auto; }
+#companies .content-section .buildings-wrapper .building .companies-list { display: none; text-align: left; padding: 10px 0; overflow: hidden; height: auto; width: 100%; min-width: 100%; }
 #companies .content-section .buildings-wrapper .building .companies-list .company-link { float: left; width: 250px; }
-#companies .content-section .buildings-wrapper .building .companies-list .company-link a { clear: both; color: black; }
+#companies .content-section .buildings-wrapper .building .companies-list .company-link a { color: black; }
 #companies .content-section .buildings-wrapper .building .companies-list .company-link a p { font-size: 13px; line-height: 1em; }
 #companies .tri-top { transform: rotate(8deg); -ms-transform: rotate(8deg); -moz-transform: rotate(8deg); -webkit-transform: rotate(8deg); -o-transform: rotate(8deg); height: 400px; bottom: -200px; }
 #companies .tri-bottom { transform: rotate(8deg); -ms-transform: rotate(8deg); -moz-transform: rotate(8deg); -webkit-transform: rotate(8deg); -o-transform: rotate(8deg); height: 400px; top: -200px; }
