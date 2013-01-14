@@ -17,9 +17,11 @@
       <h1 class="page-title left"><?php print $title; ?></h1>
     <?php endif; ?>
     <?php print render($title_suffix); ?>
-    <div class="admin_tabs right">
-      <?php print render($primary_local_tasks); ?>
-    </div>
+    <?php if ( $user->uid ==1) { ?>
+      <div class="admin_tabs right">
+        <?php print render($primary_local_tasks); ?>
+      </div>
+    <?php } ?>
   </header>
 
   <div id="page">
