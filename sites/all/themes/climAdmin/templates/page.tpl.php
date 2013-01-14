@@ -1,3 +1,14 @@
+<?php global $user; ?>
+<?php if ( $user->uid != 1 ) { ?>
+  <div class="cirro-header">
+    <ul class="cirro-header-links">
+      <li><a href="admin/dash">Dashboard</a></li>
+      <li><a href="admin/people">People</a></li>
+      <li><a href="user/logout">Logout</a></li>
+    </ul>
+  </div>
+<?php } ?>
+
 <div class="container-fluid">  
   <header id="header" class="clearfix">
     <?php print $breadcrumb; ?>
