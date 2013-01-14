@@ -32,7 +32,9 @@ function cirro_will_admin_page() {
 	// Init
 	$html = 'HELLO WEB';
 
-
+	$files = cirro_core_multi_file_loader('trade_item', 1, 'download');
+	
+	dsm($files);
 
 	return $html;
 

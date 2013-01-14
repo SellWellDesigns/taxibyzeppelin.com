@@ -1,3 +1,18 @@
+<?php global $user; ?>
+<?php if ( $user->uid != 1 ) { ?>
+  <div class="cirro-header">
+    <ul class="cirro-header-links">
+      <?php if ( user_access('access dashboard') ) { ?>
+        <li><a href="/admin/dash">Dashboard</a></li>
+      <?php } ?>
+      <?php if ( user_access('administer users') ) { ?>
+        <li><a href="/admin/people">People</a></li>
+      <?php } ?>
+      <li><a href="/user/logout">Logout</a></li>
+    </ul>
+  </div>
+<?php } ?>
+
 <div class="container-fluid">  
   <header id="header" class="clearfix">
     <?php print $breadcrumb; ?>
@@ -6,9 +21,11 @@
       <h1 class="page-title left"><?php print $title; ?></h1>
     <?php endif; ?>
     <?php print render($title_suffix); ?>
-    <div class="admin_tabs right">
-      <?php print render($primary_local_tasks); ?>
-    </div>
+    <?php if ( $user->uid ==1) { ?>
+      <div class="admin_tabs right">
+        <?php print render($primary_local_tasks); ?>
+      </div>
+    <?php } ?>
   </header>
 
   <div id="page">
