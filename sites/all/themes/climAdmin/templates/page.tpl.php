@@ -2,7 +2,7 @@
 <?php if ( $user->uid != 1 ) { ?>
   <div class="cirro-header">
     <ul class="cirro-header-links">
-      <?php if ( user_access('access dashbaord') ) { ?>
+      <?php if ( user_access('access dashboard') ) { ?>
         <li><a href="/admin/dash">Dashboard</a></li>
       <?php } ?>
       <?php if ( user_access('administer users') ) { ?>
