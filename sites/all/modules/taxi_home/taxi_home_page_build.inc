@@ -87,7 +87,10 @@ function taxi_home_page_build(){
     $company = $value->title;
     $company_url = $value->link;
     $building = str_replace('_', ' ', $value->building);
-    $options = array( 'html' => TRUE );
+    $options = array(
+      'html' => TRUE,
+      'attributes' => array('target' => '_blank')
+    );
     $link = l( "<p>$company</p>", $company_url, $options );
 
 
