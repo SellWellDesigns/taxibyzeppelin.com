@@ -211,6 +211,19 @@ function taxi_home_page_build(){
         <div id=\"map-info\">
           <h1>MAP</h1>
           <hr></hr>
+          <div class=\"app-link\">
+            <h3> Download the Taxi App </h3>
+            <div class=\"apple-link\">
+              <a href=\"https://itunes.apple.com/us/app/taxi-directory/id637246511?ls=1&mt=8\">
+              <img src=\"/sites/default/files/applelogo.png\" />
+              </a>
+            </div>
+            <div class=\"android-link\">
+              <a href=\"https://play.google.com/store/apps/details?id=com.taxibyzeppelin\">
+                <img src=\" sites/default/files/androidlogo.png\" />
+              </a>
+            </div>
+          </div>      
         </div>
         <a href=\"https://maps.google.com/maps?q=3457+ringsby+ct&oe=utf-8&client=firefox-a&channel=np&hnear=3457+Ringsby+Ct,+Denver,+Colorado+80216&gl=us&t=v&z=16\">
           <div id=\"map-wrap\">

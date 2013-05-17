@@ -52,7 +52,7 @@ svg:not(:root) { overflow: hidden; }
 figure { margin: 0; }
 
 /* normalize.css v2.0.1 | Forms | MIT License | git.io/normalize */
-fieldset { border: 1px solid silver; margin: 0 2px; padding: 0.35em 0.625em 0.75em; }
+fieldset { border: 1px solid #c0c0c0; margin: 0 2px; padding: 0.35em 0.625em 0.75em; }
 
 legend { border: 0; padding: 0; }
 
@@ -1684,6 +1684,14 @@ article.content-section { padding: 100px 0; margin-bottom: 0; background: #edede
 .page-user .login-wrap #forgot a { color: white; }
 
 .page-user-password #forgot { display: none; }
+
+#map-info hr { margin-bottom: 20px; }
+
+.app-link { width: 350px; margin: 0 auto 40px auto; }
+
+.apple-link { float: left; width: 150px; }
+
+.android-link { float: right; width: 150px; }
 
 .clearfix { *zoom: 1; }
 .clearfix:before { display: table; line-height: 0; content: ""; }
