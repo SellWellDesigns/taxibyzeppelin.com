@@ -214,12 +214,12 @@ function taxi_home_page_build(){
           <div class=\"app-link\">
             <h3> Download the Taxi App </h3>
             <div class=\"apple-link\">
-              <a href=\"https://itunes.apple.com/us/app/taxi-directory/id637246511?ls=1&mt=8\">
+              <a href=\"https://itunes.apple.com/us/app/taxi-directory/id637246511?ls=1&mt=8\" target=\"_blank\">
               <img src=\"/sites/default/files/applelogo.png\" />
               </a>
             </div>
             <div class=\"android-link\">
-              <a href=\"https://play.google.com/store/apps/details?id=com.taxibyzeppelin\">
+              <a href=\"https://play.google.com/store/apps/details?id=com.taxibyzeppelin\" target=\"blank\">
                 <img src=\" sites/default/files/androidlogo.png\" />
               </a>
             </div>
