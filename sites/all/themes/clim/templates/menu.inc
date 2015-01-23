@@ -21,7 +21,7 @@ $nav = "
 		<li><a class=\"companies\" href=\"#companies\">Companies</a></li>
 		<li><a class=\"contact\" href=\"#contact\">Contact</a></li>
 		<li><a class=\"map\" href=\"#map\">Map</a></li>
-		<li><a href=\"http://blog.taxibyzeppelin.com/\">Blog</a></li>
+		<!--<li><a href=\"http://blog.taxibyzeppelin.com/\">Blog</a></li>-->
 		$dashboard
 	</ul>
 ";

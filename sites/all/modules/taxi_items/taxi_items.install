@@ -110,6 +110,7 @@ function taxi_items_schema() {
 						'diesel' => 'Diesel',
 						'bio_diesel' => 'Bio Diesel',
 						'drive' => 'Drive',
+						'drive2' => 'Drive 2',
 					),
 				),
 			),
